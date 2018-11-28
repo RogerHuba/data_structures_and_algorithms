@@ -1,4 +1,4 @@
-from .array_shift import main
+from .array_shift import insertShiftArray
 
 def test_even_list():
     """test function which tests by bringing in an even numbered list
@@ -6,7 +6,7 @@ def test_even_list():
     actual = [1, 2, 3, 4]
     other_value = 6
     expected = [1, 2, 6, 3, 4]
-    assert main(actual, other_value) == expected
+    assert insertShiftArray(actual, other_value) == expected
 
 def test_odd_list():
     """test function which tests by bringing in an off numberedlist
@@ -14,7 +14,7 @@ def test_odd_list():
     actual = [1, 2, 3, 4, 5]
     other_value = 6
     expected = [1, 2, 3, 6, 4, 5]
-    assert main(actual, other_value) == expected
+    assert insertShiftArray(actual, other_value) == expected
 
 def test_same_number_list():
     """test function which tests by bringing in a list with the same numbers in the list
@@ -22,4 +22,4 @@ def test_same_number_list():
     actual = [1, 1, 1, 1, 1]
     other_value = 6
     expected = [1, 1, 1, 6, 1, 1]
-    assert main(actual, other_value) == expected
+    assert insertShiftArray(actual, other_value) == expected

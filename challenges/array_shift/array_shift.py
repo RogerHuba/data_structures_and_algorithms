@@ -1,4 +1,4 @@
-def main(old_list, value_add):
+def insertShiftArray(old_list, value_add):
     '''Function that brings in a list and a value and adds value to the middle of the list
     '''
     if (len(old_list))%2:
