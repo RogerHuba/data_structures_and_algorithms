@@ -25,7 +25,7 @@ def test_simple_alphanumeric_list_and_value():
 
 
 def test_simple_numeric_list_and_no_value():
-    """This function will test as a alphanumeric list and value."""
+    """This function will test as a numeric list and a no value."""
     actual_lst = [1, 2, 3, 4, 5, 6, 7]
     actual_val = 10
     actual = binary_search(actual_lst, actual_val)
@@ -33,10 +33,23 @@ def test_simple_numeric_list_and_no_value():
     assert actual == expected
 
 
-def test_empty_list_and_no_value():
-    """This function will test as a alphanumeric list and value."""
+def test_empty_list_and_value():
+    """This function will test an empty list with a value."""
     actual_lst = []
     actual_val = 10
     actual = binary_search(actual_lst, actual_val)
     expected = -1
     assert actual == expected
+
+
+def test_numeric_list_with_multiple_values():
+    """
+    This function will test a numeric list with
+    multiple values in list and value.
+    """
+    actual_lst = [1, 2, 5, 8, 3, 6, 3, 1, 2]
+    actual_val = 2
+    actual = binary_search(actual_lst, actual_val)
+    expected = 1
+    assert actual == expected
+
