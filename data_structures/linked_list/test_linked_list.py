@@ -83,3 +83,4 @@ def test_value_is_not_in_linked_list():
     """Test function to validate a value not in linked list."""
     ll = LinkedList([1, 2, 3, 4])
     assert ll.includes(6) is False
+

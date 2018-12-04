@@ -50,3 +50,49 @@ class LinkedList(object):
             else:
                 current = current._next
         return False
+
+    def insert_at_end(self, value):
+        """Function will add a new node with given value at the/
+        end of the list"""
+        if self.head is None:
+            self.insert(value)
+        else:
+            current = self.head
+            while current is not None:
+                if current._next is not None:
+                    current._next = Node(value)
+                    self._size += 1
+                    break
+                current = current._next
+                self._size += 1
+
+    def insert_before_value(self, value, add_value):
+        """Function will add a new node before a given value."""
+        current = self.head
+        previous = None
+        while current:
+            if current.val == value:
+                if previous is None:
+                    self.insert(add_value)
+                else:
+                    new_node = Node(add_value)
+                    new_node._next = current
+                    previous._next = add_value
+                    self._size += 1
+                return
+            previous = current
+            current = current._next
+
+    def insert_after_value(self, value, add_value):
+        """Function will add a new node after a given value
+        """
+        current = self.head
+        while current:
+            if current.val == value:
+                new_node = Node(add_value)
+                new_node._next = current
+                next._next = add_value
+                self._size += 1
+                break
+            current = current._next
+
