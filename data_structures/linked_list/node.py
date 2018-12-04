@@ -5,6 +5,7 @@ class Node(object):
         self.val = val
         self._next = _next
 
+
     def __str__(self):
         """Function for user facing data."""
         output = f'{ self.val }'
