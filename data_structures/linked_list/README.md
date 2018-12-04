@@ -19,4 +19,5 @@
 <!--
 11-29-2018 1500 - Added functionality to add and delete some things.
 12-03-2018 1400 - Added insertion methods to add to end, add before, and add after
+12-04-2018 1400 - Added fucntion to get the nth position from the tail and return that value.
 -->

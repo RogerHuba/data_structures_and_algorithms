@@ -84,3 +84,23 @@ def test_value_is_not_in_linked_list():
     ll = LinkedList([1, 2, 3, 4])
     assert ll.includes(6) is False
 
+
+def test_k_from_end_expected():
+    """Test that will verify the expected output"""
+    ll = LinkedList([1, 2, 3, 4, 5])
+    assert ll.k_from_end(2) == 3
+
+
+def test_k_from_end_not_there():
+    """Test will check if value larger than linked list"""
+    ll = LinkedList([1, 2, 3, 4, 5])
+    with pytest.raises(ValueError):
+        ll.k_from_end(5)
+
+
+def test_k_from_end_node_empty():
+    """Test will check if value larger than linked list"""
+    ll = LinkedList([1, 2, 3, 4, 5])
+    with pytest.raises(ValueError) as ve:
+        ll.k_from_end(5)
+    assert '5 exceeds node length' in str(ve.value)

@@ -96,3 +96,15 @@ class LinkedList(object):
                 break
             current = current._next
 
+    def k_from_end(self, k):
+        """This function gets nth distance from tail and return that value."""
+        value_queue = []
+        current = self.head
+        while current is not None:
+            value_queue.append(current.val)
+            if len(value_queue) > (k + 1):
+                value_queue = value_queue[1:]
+            current = current._next
+        if len(value_queue) < (k + 1):
+            raise ValueError(f'{k} exceeds node length')
+        return value_queue[0]
