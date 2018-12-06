@@ -104,3 +104,22 @@ def test_k_from_end_node_empty():
     with pytest.raises(ValueError) as ve:
         ll.k_from_end(5)
     assert '5 exceeds node length' in str(ve.value)
+
+
+# def test_merge_expected():
+#     """Test the merge function returns an expected value"""
+#     ll1, ll2 = LinkedList([1, 3, 5]), LinkedList([2, 4, 6])
+#     assert ll1.merged_list(ll1, ll2) == 1#[1, 2, 3, 4, 5, 6]
+#     pass
+
+
+# def test_merge_list1_bigger():
+#     ll1, ll2 = LinkedList([1, 3, 5, 7]), LinkedList([2, 4, 6])
+#     assert ll1.merged_list(ll1, ll2) == 1#[1, 2, 3, 4, 5, 6, 7]
+#     pass
+
+
+# def test_merge_list2_bigger():
+#     ll1, ll2 = LinkedList([1, 3, 5]), LinkedList([2, 4, 6, 8])
+#     assert ll1.merged_list(ll1, ll2) == 1#[1, 2, 3, 4, 5, 6, 8]
+#     pass

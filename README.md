@@ -7,3 +7,8 @@ Follows a standard GitHub workflow for cloning and requiring implementations usi
 ## Table of Contents
 1. Data Structures
     - [array_shift](./challenges/array-shift)
+    - [ll_kth_from_end](/.assets/ll_kth_from_end1.jpg)
+    - [ll_kth_from_end](/.assets/ll_kth_from_end2.jpg)
+
+8. - [ll_merge](/.assets/ll_merge)
+

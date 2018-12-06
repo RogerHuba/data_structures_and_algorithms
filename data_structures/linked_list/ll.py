@@ -95,6 +95,7 @@ class LinkedList(object):
                 self._size += 1
                 break
             current = current._next
+        return
 
     def k_from_end(self, k):
         """This function gets nth distance from tail and return that value."""
