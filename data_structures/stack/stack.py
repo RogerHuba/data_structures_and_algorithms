@@ -1,11 +1,20 @@
-class Stack(object):
-    """
-    """
+from .node import Node
 
-    def _init__(self):
-        """
-        """
+
+class Stack(object):
+    """Class node stacks"""
+
+    def _init__(self, _iterable=None):
+        """Create Stack"""
         self.top = None
+        self._size = 0
+
+        if _iterable:
+            if type(_iterable) is not list:
+                for value in _iterable:
+                    self.push(value)
+            else:
+                raise TypeError('Iterable must be a list type.')
 
     def __repr__(self):
         """
