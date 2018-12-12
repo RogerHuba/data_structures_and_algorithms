@@ -13,6 +13,6 @@ class Node(object):
         return f'<Node Value: { self.value }>'
 
     def __repr__(self):
-        """
+        """Bla Blah.
         """
         return f'<Node Value: { self.value }'
