@@ -3,8 +3,8 @@ from .stack import Stack
 
 
 @pytest.fixture
-def small_stackß():
-    stack = ç()
+def small_stack():
+    stack = Stack()
     stack.push(1)
     stack.push(2)
     stack.push(3)
@@ -14,20 +14,21 @@ def small_stackß():
 def test_empty_stack():
     """Test if the stack is empty"""
     stack = Stack()
-    assert stack.top() is None
+    print(stack)
+    assert stack.top is None
 
 
-def test_create_stack:
-    """
-    """
+def test_empty_stack_len():
     stack = Stack()
-    assert stack.top is None;
+    assert len(stack) == 0
 
 
-def test_push_stack:
-    """
-    """ß
+def test_push_stack(small_stack):
+    print(small_stack.peek())
+    # import pdb; pdb.set_trace()
+    assert small_stack.peek()
 
-def test_pop_stack:
-    """
-    """
+
+def test_peek_empty_stack():
+    assert Stack().peek() is None
+

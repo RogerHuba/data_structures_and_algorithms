@@ -19,6 +19,3 @@
 <!--
 12-07-2018 1500 - Added initial functionality.
 -->
-
-## Change Log
-

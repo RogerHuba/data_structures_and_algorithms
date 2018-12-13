@@ -4,40 +4,47 @@ from .node import Node
 class Stack(object):
     """Class node stacks"""
 
-    def _init__(self, _iterable=None):
+    def __init__(self, iterable=None):
         """Create Stack"""
         self.top = None
-        self._size = 0
+        self.size = 0
 
-        if _iterable:
-            if type(_iterable) is not list:
-                for value in _iterable:
-                    self.push(value)
-            else:
-                raise TypeError('Iterable must be a list type.')
+        if iterable is None:
+            iterable = []
+
+        if type(iterable) is not list:
+            raise TypeError('Iterable must be list type.')
+
+        for value in iterable:
+            self.push(value)
 
     def __repr__(self):
-        """
-        """
+        """"""
         return f'<STACK Top: { self.top }>'
 
+    def __str__(self):
+        """"""
+        return f'<Stack Top: {self.top}>'
+
+    def __len__(self):
+        return self.size
+
     def push(self, value):
-        """
-        """
-        # self.top = Node(value, self.top)
-        node = Node(value)
-        node.next_node = self.top
-        self.top = node
-        return self
+        """"""
+        Node.next = self.top
+        self.top = Node
+        self.size += 1
+        return self.top
 
     def pop(self):
-        """
-        """
-        old_top = self.top
-        self.top = old.top.next_node
-        old_top.next_node = Node  # Implicit Handled by the jantor.
+        """"""
+        if peek(self) is true: #change to raise exception
+            temp = self.top
+            self.top = self.top.next
+            temp.next = None
+            self.size -= 1
+        return temp
 
     def peek(self):
-        """
-        """
-        return self.top  # or self.top.value
+        """"""
+        return self.top
