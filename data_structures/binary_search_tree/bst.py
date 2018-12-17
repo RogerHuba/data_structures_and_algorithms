@@ -111,5 +111,3 @@ class BST(object):
     #         self._find(val, node.left)
     #     elif val > node.value and node.right is not None:
     #         self._find(val, node.right)
-
-
