@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+jupyter = "*"
 pytest = "*"
-pytest-watch = "*"
 
 [requires]
 python_version = "3.6"
