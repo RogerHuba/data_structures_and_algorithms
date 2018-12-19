@@ -20,6 +20,5 @@
     12-14-2018 - Initial node and functionality.
     12-17-2018 - Implement traversal search functionality.
     12-18-2018 - Implement breadth search functionality
-    12-19-2018 - Implement find_max_value functionality.
-
+    12-19-2018 - Implement find_max_value functionality. \assets\max_value.jpg
 -->
