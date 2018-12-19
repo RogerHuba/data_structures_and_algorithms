@@ -1,3 +1,6 @@
+from queue import Queue
+
+
 class Node(object):
     """Creates Node."""
     def __init__(self, val):
@@ -96,18 +99,20 @@ class BST(object):
             else:
                 node.right = Node(val)
 
-    # def find(self, val):
-    #     """."""
-    #     if self.root is not None:
-    #         return self._find(val, self.root)
-    #     else:
-    #         return None
 
-    # def _find(self, val, node):
-    #     """."""
-    #     if val == node.value:
-    #         return node
-    #     elif val < node.value and node.left is not None:
-    #         self._find(val, node.left)
-    #     elif val > node.value and node.right is not None:
-    #         self._find(val, node.right)
+def breadth_first(self, node):
+    """Return values of breadth first search."""
+    if self.root is None:
+        return
+    else:
+        print(self.head),
+        breadth_queue = Queue()
+        breadth_queue(self.head)
+    while breadth_queue:
+        current = breadth_queue.dequeue()
+        if current.left:
+            breadth_queue.queue.enqueue(current.left)
+        if current.right:
+            breadth_queue.queue.enqueue(current.right)
+        print(current),
+    return

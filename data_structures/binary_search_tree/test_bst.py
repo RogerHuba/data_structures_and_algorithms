@@ -1,6 +1,8 @@
 from .bst import BST
 from .bst import Node
+from .bst import breadth_first
 import pytest
+
 
 @pytest.fixture
 def empty_BST():
@@ -70,3 +72,14 @@ def test_in_order():
 def test_post_order():
     """Test a post order tree output."""
     pass
+
+
+def test_breadth_first_exists():
+    """Test that the Node class exists."""
+    assert breadth_first
+
+
+def test_breadth_first_root_only():
+    """Test sending only the head to seatch."""
+    tree = Node(10)
+    
