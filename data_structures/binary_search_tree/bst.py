@@ -1,21 +1,5 @@
 from queue import Queue
-
-
-class Node(object):
-    """Creates Node."""
-    def __init__(self, val):
-        """."""
-        self.left = None
-        self.right = None
-        self.val = val
-
-    def __repr__(self):
-        """."""
-        return f'<Node: value={self.val}, left={self.left}, right={self.right})>'
-
-    def __str__(self):
-        """."""
-        return self.val
+from .node import Node
 
 
 class BST(object):
@@ -107,8 +91,8 @@ def breadth_first(self, node):
     else:
         print(self.head),
         breadth_queue = Queue()
-        breadth_queue(self.head)
-    while breadth_queue:
+        breadth_queue(self.root)
+    while breadth_queue is not None:
         current = breadth_queue.dequeue()
         if current.left:
             breadth_queue.queue.enqueue(current.left)

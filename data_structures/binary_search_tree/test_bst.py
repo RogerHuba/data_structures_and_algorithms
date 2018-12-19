@@ -1,13 +1,38 @@
 from .bst import BST
-from .bst import Node
+from .node import Node
 from .bst import breadth_first
 import pytest
 
 
 @pytest.fixture
-def empty_BST():
+def empty_tree():
     return BST()
 
+
+@pytest.fixture
+def small_tree():
+    tree = BST()
+    tree.insert(4)
+    tree.insert(2)
+    tree.insert(1)
+    tree.insert(6)
+    tree.insert(8)
+    return tree
+
+
+@pytest.fixture
+def large_tree():
+    tree = BST()
+    tree.insert(5)
+    tree.insert(4)
+    tree.insert(3)
+    tree.insert(2)
+    tree.insert(1)
+    tree.insert(6)
+    tree.insert(8)
+    tree.insert(10)
+    tree.insert(12)
+    return tree
 
 def test_Node_exists():
     """Test that the Node class exists."""
@@ -74,12 +99,12 @@ def test_post_order():
     pass
 
 
-def test_breadth_first_exists():
-    """Test that the Node class exists."""
-    assert breadth_first
+def test_breadth_first_small():
+    """ Test small tree """
+    BST.insert_node(node)
+    test_list.append(node.value)
+    return
 
-
-def test_breadth_first_root_only():
-    """Test sending only the head to seatch."""
-    tree = Node(10)
-    
+def test_bredth_first_large():
+    """."""
+    pass
