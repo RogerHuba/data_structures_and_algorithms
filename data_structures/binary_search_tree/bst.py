@@ -100,3 +100,25 @@ def breadth_first(self, node):
             breadth_queue.queue.enqueue(current.right)
         print(current),
     return
+
+
+def find_maximum_value(self, node):
+    """Traverse tree and get value of the largest node."""
+    if self.root is None:
+        return
+    else:
+        print(self.head),
+        max_queue = Queue()
+        max_queue(self.root)
+        max_value = 0
+
+    while max_queue is not None:
+        current = max_queue.dequeue()
+        if current > max_value:
+            max_value = current
+        if current.left:
+            max_queue.queue.enqueue(current.left)
+        if current.right:
+            max_queue.queue.enqueue(current.right)
+        print(current),
+    return max_value
