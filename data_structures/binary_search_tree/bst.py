@@ -84,7 +84,7 @@ class BST(object):
                 node.right = Node(val)
 
 
-def breadth_first(self, node):
+def breadth_first(self, tree):
     """Return values of breadth first search."""
     if self.root is None:
         return
