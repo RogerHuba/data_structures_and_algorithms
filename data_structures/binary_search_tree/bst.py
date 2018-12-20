@@ -72,16 +72,22 @@ class BST(object):
         if node.right is not None:
             self.in_order(node.right)
 
-    def insert_node(self, val, node):
+    def insert(self, val):  # If root, left and right need to traverse.
         """."""
         if self.root is None:
             self.root = Node(val)
-
         else:
-            if node.right is not None:
-                self._add(val, node.right)
-            else:
-                node.right = Node(val)
+            if self.root.left is None:
+                self.root.left = val
+            elif self.root.right is None:
+                self.root.right = val
+
+    def insert_node(self, node):  # This does not look right.  Need to look at.
+        """."""
+        if node.right is not None:
+            self._add(node.right)
+        else:
+            node.right = Node(node)
 
 
 def breadth_first(self, node):
