@@ -1,5 +1,9 @@
+"""Creates a node."""
+
+
 class Node(object):
     """Creates Node."""
+
     def __init__(self, val, left=None, right=None):
         """."""
         self.left = None
