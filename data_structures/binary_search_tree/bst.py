@@ -15,26 +15,26 @@ class BST(object):
     #     """."""
     #     return f'<Node: value={self.val}, left={self.left}, right={self.right})>'
 
-    # def __str__(self):
-    #     """."""
-    #     return self.root.val
+    def __str__(self):
+        """."""
+        return self.root.val
 
-    # def delete_tree(self):
-    #     """."""
-    #     self.root = None
-    #     return self.root
+    def delete_tree(self):
+        """."""
+        self.root = None
+        return self.root
 
-    # def display_tree(self):
-    #     """."""
-    #     if(self.root is not None):
-    #         self._print_tree(self.root)
+    def display_tree(self):
+        """."""
+        if(self.root is not None):
+            self._print_tree(self.root)
 
-    # def _print_tree(self, node):
-    #     """."""
-    #     if (node is not None):
-    #         self._print_tree(node.left)
-    #         print(str(node.value) + ' ')
-    #         self._print_tree(node.right)
+    def _print_tree(self, node):
+        """."""
+        if (node is not None):
+            self._print_tree(node.left)
+            print(str(node.value) + ' ')
+            self._print_tree(node.right)
 
     def pre_order(self, operation):
         """Looks at root, left, then right."""
@@ -57,7 +57,7 @@ class BST(object):
         traverse(self.root)
 
     def in_order(self, operation):
-        """Looks left, root, then right."""
+        """Look left, root, then right."""
         def traverse(root):
             if root is None:
                 return
@@ -66,7 +66,7 @@ class BST(object):
             traverse(root.right)
         traverse(self.root)
 
-    def insert(self, val):  # If root, left and right need to traverse.
+    def insert(self, val):
         """."""
         new_node = Node(val)
         if self.root is None:
@@ -96,7 +96,7 @@ class BST(object):
         def operation(node):
             nonlocal max
             if node.val > max:
-                mox = node.val
+                max = node.val
         self.in_order(operation)
         return max
 

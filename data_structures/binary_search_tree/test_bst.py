@@ -151,4 +151,4 @@ def test_find_maximum_value():
 def test_find_maximum_value_negative():
     """Test to find the max value with a small tree."""
     tree = BST([-9, -5, -15, -7])
-    assert tree.find_maximum_value() == -9
+    assert tree.find_maximum_value() == -5
