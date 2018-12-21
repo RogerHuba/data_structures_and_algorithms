@@ -1,3 +1,6 @@
+"""Queue copied from datastructure."""
+
+
 class Queue(object):
     """Creates queue object."""
 
