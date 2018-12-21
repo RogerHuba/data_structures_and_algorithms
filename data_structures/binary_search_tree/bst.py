@@ -11,9 +11,9 @@ class BST(object):
         for val in iterable:
             self.insert(val)
 
-    # def __repr__(self):
-    #     """."""
-    #     return f'<Node: value={self.val}, left={self.left}, right={self.right})>'
+    def __repr__(self):
+        """."""
+        return f'<Node: value={self.val}, left={self.left}, right={self.right})>'
 
     def __str__(self):
         """."""
