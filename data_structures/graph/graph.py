@@ -31,13 +31,16 @@ class Graph:
 
     def add_edge(self, v1, v2, weight):
         """."""
-        if v1 is not self.graph or v2 is not self.graph:
-            return
-        self.graph[v1][v2] = weight
+        if v1 in self.graph:
+            if v2 in self.graph:
+                self.graph[v1][v2] = weight
+                # import pdb; pdb.set_trace()
+                return self.graph[v1][v2]
+        return False
+
 
     def get_neighbors(self, val):
         """."""
         if self.has_vert(val):
-            print(self.graph[val].keys())
-            return self.graph[val].keys()
+            return self.graph[val]
         return False
