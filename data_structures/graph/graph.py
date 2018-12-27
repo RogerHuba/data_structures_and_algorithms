@@ -1,47 +1,46 @@
 class Graph:
     """Class to create graph."""
 
-    def __init__(self, verticies):
+    def __init__(self):
         """Initialization."""
         self.graph = {}
 
     def __repr__(self):
         """."""
-        pass
+        return f'Graph: {self.graph} Size: {len(self.graph)}'
 
     def __str__(self):
         """."""
-        pass
+        return  f'Graph: {self.graph}'
 
     def __len__(self):
         """."""
-        pass
+        return len(self.graph)
 
     def add_vert(self, val):
         """."""
-        
-        self.val = self.graph
-        
-        # add vertice to self.graph
-        # check to see if the vert already exists: if so raise exception
-        # create a helper method
-        pass
+        if not self.has_vert(val):
+            self.graph[val] = {}
+        return self
 
     def has_vert(self, val):
         """."""
-        # checks for a key in the graph
-        pass
+        if val in self.graph:
+            return True
+        return False
 
     def add_edge(self, v1, v2, weight):
         """."""
-        if v1 is not self.graph or v2 is not self.graph:
-            return
-        
-        # add a relationship and weight between two verts
-        # don't forget to validate
-        pass
+        if v1 in self.graph:
+            if v2 in self.graph:
+                self.graph[v1][v2] = weight
+                # import pdb; pdb.set_trace()
+                return self.graph[v1][v2]
+        return False
+
 
     def get_neighbors(self, val):
         """."""
-        # Given a val (key), return all adjacent verts
-        pass
+        if self.has_vert(val):
+            return self.graph[val]
+        return False

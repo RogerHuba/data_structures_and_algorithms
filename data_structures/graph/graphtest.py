@@ -1,6 +1,8 @@
-""" 
+"""
 A Python program to demonstrate the adjacency
-list representation of the graph
+list representation of the graph.  Obtained from the
+web to get a handle on how graphs were working.
+This was basis for initial setup.
 """
 
 
