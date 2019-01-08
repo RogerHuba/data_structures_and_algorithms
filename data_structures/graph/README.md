@@ -15,7 +15,8 @@
 
 ## Change Log
 <!--
-12-21-2018 1500 - Start Research on Graphs
-12-21-2018 2300 - Submission
+12-21-2018 1500 - Start Research on Graphs.
+12-21-2018 2300 - Submission.
 12-26-2018 2200 - Final Changes.
+01-07-2018 1330 - Added Breadth First on existing class.
 -->
