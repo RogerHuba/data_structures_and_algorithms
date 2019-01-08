@@ -40,7 +40,6 @@ class Graph:
                 return self.graph[v1][v2]
         return False
 
-
     def get_neighbors(self, val):
         """."""
         if self.has_vert(val):
@@ -52,5 +51,8 @@ class Graph:
         if not self.has_vert(starting):
             return []
 
-
-
+    def get_edge(self, destination):
+        """See of a destination is an attached vert."""
+        
+        return 
+    
