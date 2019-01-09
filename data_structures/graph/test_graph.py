@@ -24,6 +24,16 @@ def test_has_vert():
     """Validated if has_vert is there."""
     assert graph.has_vert
 
+
+def test_breadth_first_search():
+    """Validate breadth_first_search is there."""
+    assert breadth_first
+
+
+def test_got_edge():
+    """Validate get_edge is there."""
+    assert get_edge
+
 def test_add_vert_check_wrong():
     """Validates vert is not there."""
     graph.add_vert('A')

@@ -19,5 +19,7 @@ Follows a standard GitHub workflow for cloning and requiring implementations usi
 12. 
 13. 
 14. - [find_maximum_value](./assets/max_value.jpg)
+26. - [breadth_first_graph](./assets/breadth_first_graph.jpg)
+27. - [get)edges](./assets/get_edges.jpg)
 
 
