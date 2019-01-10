@@ -56,3 +56,7 @@ class Graph:
         
         return 
     
+    def depth_first(self, starting:
+        """Complete a depth first search on the graph."""
+        if no self.has_vert(starting):
+            return []
