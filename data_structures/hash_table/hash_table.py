@@ -8,15 +8,15 @@ class HashMap:
 
     def __init__(self):
         """Initialize Hash Table."""
-        self.size = 6  # sets value of hash array
-        self.map = [None] * self.size  # Foces list with None
+        self.size = 1024  # sets value of hash array
+        self.map = [None] * self.size  # Forces list with None
 
     def __repr__(self):
         """."""
         return f'HashTable: {self.hashtable}'
 
     def _get_hash(self, key):
-        """Calculatest he index of the key and returns index."""
+        """Calculates the index of the key and returns index."""
         hash = 0
         for char in str(key):
             hash += ord(char)
@@ -66,16 +66,16 @@ class HashMap:
                 print(str(item))
 
 
-h = HashMap()
-h.add('Bob', '567-1234')
-h.add('Ming', '567-2345')
-h.add('Ming', '567-3456')
-h.add('Mary', '567-4567')
-h.add('Roger', '567-5678')
-h.add('Tom', '567-6789')
-h.add('Tina', '567-7890')
-h.add('Roger', '929-9401')
-h.print()
-h.delete('Bob')
-h.print()
-print('Ming ' + h.get('Ming'))
+# h = HashMap()
+# h.add('Bob', '567-1234')
+# h.add('Ming', '567-2345')
+# h.add('Ming', '567-3456')
+# h.add('Mary', '567-4567')
+# h.add('Roger', '567-5678')
+# h.add('Tom', '567-6789')
+# h.add('Tina', '567-7890')
+# h.add('Roger', '929-9401')
+# h.print()
+# h.delete('Bob')
+# h.print()
+# print('Ming ' + h.get('Ming'))
