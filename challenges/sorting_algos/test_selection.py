@@ -13,6 +13,12 @@ def test_list_output():
     assert [0, 1, 2, 4, 5, 6, 9]
 
 
+def test_list_output_already_in_order():
+    """Test lst returns the right order."""
+    selection_sort([0, 1, 2, 4, 5, 6, 9])
+    assert [0, 1, 2, 4, 5, 6, 9]
+
+
 def test_an_empty_list():
     """Test an empty list."""
     selection_sort([])

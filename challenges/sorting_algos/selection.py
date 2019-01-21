@@ -1,7 +1,7 @@
 def selection_sort(lst):
     """This function will do a sort on a string of input."""
     for i in range(len(lst)):
-        if lst[0] == '':
+        if len(lst) == 0:
             return False
         min_position = i
         for j in range(i+1, len(lst)):
