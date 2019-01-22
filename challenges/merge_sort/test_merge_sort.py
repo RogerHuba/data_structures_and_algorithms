@@ -9,14 +9,14 @@ def test_merge_sort_exists():
 
 def test_merge_sort_no_list():
     """Test the merge sort with nothing in the list."""
-    merge_sort([''])
+    merge_sort([])
     assert 'False'
 
 
 def test_merge_sort_one_item_list():
     """Test the merge sort with one item in the list"""
     merge_sort([5])
-    assert [6]
+    assert [5]
 
 
 def test_merge_sort_odd_list():
@@ -35,4 +35,4 @@ def test_merge_sort_large_list():
     """Test the merge sort with a list of even numbers."""
     lst = [1, 5, 2, 6, 3, 7, 4, 8, 10, 9, 11, 30, 40, 50, 60, 70, 35, 45, 55, 65]
     merge_sort(lst)
-    assert [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90]
+    assert [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30, 35, 40, 45, 50, 55, 60, 65, 70]

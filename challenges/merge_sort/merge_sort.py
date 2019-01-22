@@ -1,29 +1,40 @@
 def merge_sort(lst):
     """Complete a sort based on the merge sort algorithm."""
-    if len(lst) == '':
-        return 'False'
-    elif len(lst) < 1:
+    if len(lst) < 2:
         return lst
     else:
-        new_result = []
-        mid = int(len(lst) / 2)
+        mid = int(len(lst) // 2)
         first_half = lst[:mid]
         second_half = lst[mid:]
 
-    while len(first_half) > 0 or len(second_half) > 0:
-        if len(first_half) > 0 and len(second_half) > 0:
-            if first_half[0] > second_half[0]:
-                new_result.append(second_half[0])
-                second_half.pop(0)
+        merge_sort(first_half)
+        merge_sort(second_half)
+
+        i = 0
+        j = 0
+        k = 0
+
+        while i < len(first_half) and j < len(second_half):
+            if first_half[i] < second_half[j]:
+                lst[k] = first_half[i]
+                i += 1
             else:
-                new_result.append(first_half[0])
-                first_half.pop(0)
-        elif len(second_half) > 0:
-            for i in second_half:
-                new_result.append(i)
-                second_half.pop(0)
-        else:
-            for i in first_half:
-                new_result.append(i)
-                first_half.pop(0)
-    return new_result
+                lst[k] = second_half[j]
+                j += 1
+            k += 1
+
+        while i < len(first_half):
+            lst[k] = first_half[i]
+            i += 1
+            k += 1
+
+        while j < len(second_half):
+            lst[k] = second_half[j]
+            j += 1
+            k += 1
+    return lst
+
+
+lst1 = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+merge_sort(lst1)
+
