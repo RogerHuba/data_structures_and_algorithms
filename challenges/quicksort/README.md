@@ -1,11 +1,11 @@
 # Quicksort
-<!-- Short summary or background information -->
+<!-- Sorts an array using the quicksort -->
 
 ## Challenge
-<!-- Description of the challenge -->
+<!-- Write a function that completes a quicksort -->
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+<!-- BigO time is (n log n), BigO space is O(1) -->
 
 ## Solution
-<!-- Embedded whiteboard image -->
+<!--  [Quicksort Method](/.assets/quicksort.jpg)-->
