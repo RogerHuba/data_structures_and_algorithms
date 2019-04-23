@@ -95,7 +95,7 @@ const removeWithAnon = (arr) => {
       arr.pop();
     }
   });
-  return arr
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ const createList = (availableItems) => {
       newArr.push(value.name);
     }
   });
-  return newArr
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
