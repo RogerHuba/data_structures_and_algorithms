@@ -177,23 +177,31 @@ Write a function named sortMeetingsByDay that takes in an array of objects, each
 Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
 ------------------------------------------------------------------------------------------------ */
 
-function Meeting(dayOfWeek, start, end) {
+function Meeting( dayOfWeek, start, end ) {
   this.dayOfWeek = dayOfWeek;
   this.start = start;
   this.end = end;
 }
 const meetings = [
-  new Meeting('Monday', '0900', '1000'),
-  new Meeting('Wednesday', '1300', '1500'),
-  new Meeting('Tuesday', '1145', '1315'),
-  new Meeting('Wednesday', '0930', '1000'),
-  new Meeting('Monday', '0900', '0945'),
-  new Meeting('Friday', '1200', '1345'),
+  new Meeting( 'Monday', '0900', '1000' ),
+  new Meeting( 'Wednesday', '1300', '1500' ),
+  new Meeting( 'Tuesday', '1145', '1315' ),
+  new Meeting( 'Wednesday', '0930', '1000' ),
+  new Meeting( 'Monday', '0900', '0945' ),
+  new Meeting( 'Friday', '1200', '1345' ),
 ];
 
-const sortMeetingsByDay = (arr) => {
-  // Solution code here...
-};
+const sortMeetingsByDay = ( arr ) => {
+  arr.sort( ( a, b ) =>  {
+    if ( a.toString().dayOfWeek < b.toString().dayOfWeek ){
+      return -1;
+    } else if ( a.toString().dayOfWeek === b.toString().dayOfWeek ) {
+      return 0;
+    } else {
+      return 1;
+    }
+  });
+  return arr;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
