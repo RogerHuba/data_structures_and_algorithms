@@ -148,7 +148,20 @@ const sortPeopleBetter = ( arr ) => {
     if ( a.lastName < b.lastName ){
       return -1;
     } else if ( a.lastName === b.lastName ) {
-      return 0;
+      if ( a.firstName < b.firstName ){
+        return -1;
+      } else if ( a.firstName === b.firstName ) {
+        if ( a.age < b.age ){
+          return -1;
+        } else if ( a.age === b.age ) {
+          return 0;
+
+        } else {
+          return 1;
+        }
+      } else {
+        return 1;
+      }
     } else {
       return 1;
     }
@@ -302,7 +315,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
