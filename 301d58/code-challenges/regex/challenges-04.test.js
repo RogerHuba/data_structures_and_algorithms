@@ -86,16 +86,14 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
+  // Need to figure a way to hold the space in the array.
   let spaceWords = [];
   let arr = str.split( " " );
-  console.log('Arr array', arr);
   arr.forEach(element => {
     if ( (/\w+\s/g).test( element ) ){
-      console.log('Element: ', element);
       spaceWords.push( element );
     }
   });
-  console.log('The Array if spaceWords: ', spaceWords);
   return spaceWords;
 };
 
