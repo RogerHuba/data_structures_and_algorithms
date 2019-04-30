@@ -7,17 +7,18 @@ Write a function named howMuchPencil that takes in a string, as written on the s
 
 As you sharpen the pencil, the string will become shorter and shorter, starting by removing the first letter.
 
-Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
+Your function should use slice within a loop and return an array of each successive string result from losing letters to the
+ sharpener, until nothing is left.
 
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
-const howMuchPencil = (str) => {
+const howMuchPencil = ( str ) => {
   let result = [];
-  let wordArray = str.split('');
+  let wordArray = str.split( '' );
   for (let i = 0; i < wordArray.length + 1; i++){
-    result[i] = wordArray.slice(i).join('');
+    result[ i ] = wordArray.slice( i ).join( '' );
   }
   return result;
 };
@@ -31,8 +32,8 @@ of the input string.
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  let array = arr.split('');
+const wordsToCharList = ( arr ) => {
+  let array = arr.split( '' );
   return array;
 };
 
@@ -43,7 +44,8 @@ CHALLENGE 3
 You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe,
 you only want a list of the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
+Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units.
+Just the name. For example, '1 cup flour' will return 'flour'.
 
 Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
 
@@ -79,13 +81,11 @@ const gruffaloCrumble = {
 };
 
 
-const listFoods = (recipe) => {
+const listFoods = ( recipe ) => {
   let result = [];
-recipe.ingredients.forEach ( (ing) => {
-  let secondSpace = recipe.ingredients.indexOf(' ', recipe.ingredients.indexOf(' ')+1);
-  img.slice(secondSpace);
-  result.push.ing.slice(secondSpace);
-})
+  recipe.ingredients.forEach( element =>{
+    result.push( element.slice( element.indexOf( ' ', element.indexOf( ' ' ) +1 ) +1 ));
+  });
   return result;
 };
 
@@ -97,9 +97,13 @@ Write a function named splitFoods that uses split to produce the same output as 
 You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
-const splitFoods = (recipe) => {
+const splitFoods = ( recipe ) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach( element => {
+    let splitArr = element.split( ' ' );
+    let spliceArr = splitArr.splice(2, 3);
+    result.push(spliceArr.join( ' ' ));
+  });
   return result;
 };
 
@@ -114,16 +118,24 @@ the action verbs are the first word of each action.
 Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
 ------------------------------------------------------------------------------------------------ */
 
-const stepActions = (recipe) => {
+const stepActions = ( recipe ) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach(item => {
+    let makeArr = item.split( ' ' );
+    let arrWords = makeArr.splice(0, 1);
+    arrWords.forEach(arr => {
+      result.push( arr );
+    })
+  });
+
   return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array, leaving no 'gaps' behind.
+Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array,
+leaving no 'gaps' behind.
 
 The array should be modified in-place.
 
@@ -133,19 +145,22 @@ For example:
   console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
 
-const removeEvenValues = (arr) => {
-  let result = [];
-  for (let i=0; i < arr.length; i++){
-    if (arr[i] %2){
-      result.push(arr[i]);
+const removeEvenValues = ( arr ) => {
+  for( let i=0; i<arr.length; i++ ){
+    let value = arr[i];
+    if (value % 2 === 0){
+      arr.splice( i, 1 );
+      i--;
     }
   }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters will be removed from the end of the string. Return the resulting string.
+Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines
+how many characters will be removed from the end of the string. Return the resulting string.
 
 If the numberOfCharacters argument is greater than the length of the input string, the function should return an empty string.
 
@@ -157,15 +172,22 @@ removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+const removeLastCharacters = ( str, numberOfCharacters ) => {
+   if ( numberOfCharacters < str.length && numberOfCharacters >= 0 ){
+    return str.slice( 0, str.length-numberOfCharacters );
+  } else if ( numberOfCharacters < 0 ) {
+    return str;
+  } else {
+    return '';
+  }
 };
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
+Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"),
+returns the total sum of the numeric values (e.g. 6).
 ------------------------------------------------------------------------------------------------ */
 
 const totalSumCSV = (str) => {
@@ -178,7 +200,8 @@ const totalSumCSV = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-Write a function named removeVowels that takes in a string and returns a new string where all the vowels of the original string have been removed.
+Write a function named removeVowels that takes in a string and returns a new string where all the vowels of the original
+string have been removed.
 
 For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
@@ -233,25 +256,28 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should return a list of foods', () => {
-    expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+    expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts',
+      'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return a list of foods', () => {
-    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts',
+      'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return a list of recipe steps', () => {
-    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
+    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold',
+      'Spread', 'Bake']);
     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should remove the even numbers from the array', () => {
     let list = [1, 2, 3, 4, 5, 6];
     removeEvenValues(list);
@@ -264,7 +290,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should shorten the string based on the first argument', () => {
     expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
     expect(removeLastCharacters('Gregor', 2).length).toStrictEqual(4);
