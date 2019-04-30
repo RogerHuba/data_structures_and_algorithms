@@ -90,23 +90,41 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 let hasChildrenValues = (arr, character) => {
+  let hasValue = true;
   Object.values(arr).forEach( element =>{
-    console.log(element);
+  if (element.name === character) {
+    if (element.children.length > 0) {
+      hasValue = true;
+    } else {
+      hasValue =  false;
+    }
+  }
   });
+  return hasValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 3, but uses the data's entries instead of its values.
+Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 3, but uses
+the data's entries instead of its values.
 
 The input and output of this function are the same as the input and output from challenge 3.
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
+  let hasValue = true;
   Object.entries(arr).forEach( element =>{
-    console.log(element);
+  console.log(element[1].name);
+  if (element[1].name === character) {
+    if (element[1].children.length > 0) {
+      hasValue = true;
+    } else {
+      hasValue =  false;
+    }
+  }
   });
+  return hasValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,14 +134,14 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  let total;
+  let total =0;
   arr.forEach( element => {
     if (element.spouse){
       total += 2;
     } else {
       total += 1;
     }
-    arr.element.children.forEach( element2 => {
+    element.children.forEach( element2 => {
       if(element2){
         total +=1;
       }
@@ -135,7 +153,8 @@ const totalCharacters = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
-Write a function named houseSize that takes in the array of characters and creates an object for each house containing the name of the house and the number of members.
+Write a function named houseSize that takes in the array of characters and creates an object for each house containing
+the name of the house and the number of members.
 
 All of these objects should be added to an array named "sizes". Return the "sizes" array from the function.
 
@@ -157,7 +176,8 @@ We will assume that Alerie Tyrell is deceased. She missed her daughter's wedding
 
 Write a function named houseSurvivors. You may modify your houseSize function from challenge 6 to use as the basis of this function.
 
-This function should create an object for each house containing the name of the house and the number of members. If the spouse is deceased, do not include him/her in the total number of family members.
+This function should create an object for each house containing the name of the house and the number of members. If the
+spouse is deceased, do not include him/her in the total number of family members.
 
 All of these objects should be added to an array named "survivors". Return the "survivors" array from the function.
 
@@ -206,7 +226,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
   });
@@ -216,7 +236,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the number of characters in the array', () => {
     expect(totalCharacters(characters)).toStrictEqual(27);
   });
@@ -224,7 +244,9 @@ xdescribe('Testing challenge 5', () => {
 
 xdescribe('Testing challenge 6', () => {
   test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)).toStrictEqual([ { house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, { house: 'Lannister', members: 5 }, { house: 'Targaryen', members: 5 }, { house: 'Tyrell', members: 4 }, { house: 'Stark', members: 2 }, { house: 'Snow', members: 1 } ]);
+    expect(houseSize(characters)).toStrictEqual([ { house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 },
+      { house: 'Lannister', members: 5 }, { house: 'Targaryen', members: 5 }, { house: 'Tyrell', members: 4 }, { house: 'Stark', members: 2 },
+      { house: 'Snow', members: 1 } ]);
     expect(houseSize(characters).length).toStrictEqual(7);
   });
 });
