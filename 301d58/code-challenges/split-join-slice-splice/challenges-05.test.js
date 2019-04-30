@@ -81,17 +81,11 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  let temp;
-  let tempArray = [];
-  for (let i =0; i < recipe.ingredients.length; i++){
-    tempArray = recipe.ingredients[i].split(' ');
-    for (let j=0; j < tempArray.length; j++){
-      
-    }
-    temp = recipe.ingredients[i];
-    result[i] = temp;
-  }
-  console.log(result);
+recipe.ingredients.forEach ( (ing) => {
+  let secondSpace = recipe.ingredients.indexOf(' ', recipe.ingredients.indexOf(' ')+1);
+  img.slice(secondSpace);
+  result.push.ing.slice(secondSpace);
+})
   return result;
 };
 
@@ -140,7 +134,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  let result = [];
+  for (let i=0; i < arr.length; i++){
+    if (arr[i] %2){
+      result.push(arr[i]);
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
