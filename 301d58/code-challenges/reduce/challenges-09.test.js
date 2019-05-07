@@ -191,7 +191,22 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  let total = 0;
+  return arr.reduce( (accumulator, element, idx) => {
+      accumulator.push(isPrime(element));
+      console.log('Accum: ', accumulator);
+      if(idx === arr.length) {
+        accumulator.forEach( (numIdx) =>{
+          if(numIdx) {
+            total++;
+            console.log('Total: '. total);
+            return total;
+          } else {
+            return accumulator;
+          }
+        });
+      }
+  },[]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -246,10 +261,8 @@ Write a function named extractChildren that, given the array of characters from 
 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
-
-const extractChildren = (arr) => {
-  // Solution code here...
-};
+// Code Provided by Michelle
+const extractChildren = (arr) => arr.filter(x => x.name.includes('a')).reduce( (ansSoFar, currentObject) => currentObject.children ? ansSoFar.concat(currentObject.children) : ansSoFar, []);
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -292,7 +305,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
@@ -304,7 +317,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the names of the children', () => {
     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
     expect(extractChildren(characters).length).toStrictEqual(10);
