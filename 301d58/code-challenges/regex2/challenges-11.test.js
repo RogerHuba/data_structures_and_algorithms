@@ -29,7 +29,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  return /^[a-z0-9]+\.?[a-z0-9]+@\w+\.(com|net|org)$/.test(email);
+  return /^[\w]+\.?[\w]+@\w+\.(com|net|org)$/.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
