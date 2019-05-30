@@ -9,7 +9,7 @@ public class BinarySearchTest {
         int[] inputArray = new int[]{1, 2, 3, 4, 5, 6};
         int value = 5;
         int expectedOutput= 5;
-        assertEquals("Check an array to see if it contains a 4.  It will pass.",
+        assertEquals("Check an array to see if it contains a 5.  It will pass.",
                 expectedOutput, arrayBinarySearch.binSearch(inputArray,value));
     }
 
