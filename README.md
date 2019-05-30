@@ -1,25 +1,15 @@
 # Data Structure & Algorithms
-A repository of code challenges presented during my 401 Python Class.
+A repository of code challenges presented during my 401 Java Class.
 
 ## Installation
-Follows a standard GitHub workflow for cloning and requiring implementations using Python, pytest, and pipenv
+Follows a standard GitHub workflow for cloning and requiring implementations using Java and Gradle.
 
 ## Table of Contents
-1. Data Structures
-2.    - [array_shift](./challenges/array-shift)
-3.    - [ll_kth_from_end](/.assets/ll_kth_from_end1.jpg)
-4.    - [ll_kth_from_end](/.assets/ll_kth_from_end2.jpg)
-5. 
-6. 
-7. 
-8. - [ll_merge](/.assets/ll_merge)
-9. 
-10. 
-11. 
-12. 
-13. 
-14. - [find_maximum_value](./assets/max_value.jpg)
-26. - [breadth_first_graph](./assets/breadth_first_graph.jpg)
-27. - [get)edges](./assets/get_edges.jpg)
+Data Structures
+1.    [ArrayReverse - No Picture]
+2.    [ArrayShift](./401d56/assets/arrayshift_java.png)
+3.    [BinarySearch](/401d56/assets/array_binary_search.jpg)
+
+
 
 
