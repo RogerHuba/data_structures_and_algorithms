@@ -8,9 +8,9 @@ public class LinkedList
         Node next;
         int data;
 
-        Node(int d){
-            data = d;
-            next = null;
+        Node(int data){
+            this.data = data;
+            this.next = null;
         }
     }
 
@@ -42,18 +42,21 @@ public class LinkedList
         return false;
     }
 
-    public static void printLinkedList(LinkedList list){
+    public static String printLinkedList(LinkedList list){
         Node current = list.head;
         String ll = "LinkedList: ";
         while(current != null){
-            ll = ll+ current.data + "->";
+            if(current.next == null){
+                ll = ll + current.data;
+            } else {
+                ll = ll + current.data + "->";
+            }
             current = current.next;
         }
-        System.out.println(ll);
+        return ll;
     }
 
     public static int sizeOfLinkedList(LinkedList list){
-        System.out.println("Inside the counter");
         Node current = list.head;
         int listCounter = 0;
         while(current != null){
@@ -65,6 +68,7 @@ public class LinkedList
 
     public static void main(String[] args){
         LinkedList list = new LinkedList();
+        System.out.println(list.head);
         insertValue(list, 1);
         insertValue(list, 3);
         insertValue(list, 5);
@@ -75,6 +79,7 @@ public class LinkedList
 
         System.out.println(includesValue(list, 1));
         System.out.println(includesValue(list, 7));
+        System.out.println(includesValue(list, 18));
         System.out.println(sizeOfLinkedList(list));
     }
 }
