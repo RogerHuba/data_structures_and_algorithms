@@ -16,4 +16,4 @@ Print - Will return a visual representation of the Linked List
 Append - Will add to end and create a new head
 InsertBefore - Will insert a value before a given value.
 InsertAfter - Will insert a value after a given value.
-DeleteNode - Not implemented
+kthFromEnd - Will return the node value at k from the end

@@ -33,14 +33,14 @@ public class LinkedListTest {
         ll.insertValue(1);
         ll.insertValue(5);
         ll.insertValue(10);
-        assertEquals("Head should return 1", 1, ll.head.data);;
+        assertEquals("Head should return 1", 1, ll.head.data);
     }
 
     @Test
     public void testInsertValueHeadEmpty(){
         LinkedList ll = new LinkedList();
         ll.insertValue(1);
-        assertNull("Head.next should return Null", ll.head.next);;
+        assertNull("Head.next should return Null", ll.head.next);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class LinkedListTest {
         ll.insertValue(12);
         ll.insertValue(18);
         ll.insertValue(25);
-        assertEquals("Head should return 1", 1, ll.head.data);;
+        assertEquals("Head should return 1", 1, ll.head.data);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class LinkedListTest {
         LinkedList ll = new LinkedList();
         ll.insertValue(1);
         ll.insertValue(5);
-        assertTrue("Head.next should equal 5 and resolve true", ll.head.next.data == 5);;
+        assertTrue("Head.next should equal 5 and resolve true", ll.head.next.data == 5);
     }
 
     @Test
@@ -269,6 +269,25 @@ public class LinkedListTest {
         ll.insertValue(18);
         ll.insertValue(25);
         assertEquals("Last Item in List is 0", ll.kthFromEnd(0), 25);
+    }
+
+    @Test
+    public void testKthFromEndSameNumber(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(2);
+        ll.insertValue(18);
+        ll.insertValue(25);
+        assertEquals("Last Item in List is 0", ll.kthFromEnd(2), 2);
+    }
+
+    @Test
+    public void testKthFromEndListSizeOne(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        assertEquals("Last Item in List is 0", ll.kthFromEnd(0), 3);
     }
 
     @Test
