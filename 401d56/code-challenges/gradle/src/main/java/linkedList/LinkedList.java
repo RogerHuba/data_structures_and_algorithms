@@ -59,7 +59,7 @@ public class LinkedList
     public void insertBefore(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
-        if(includesValue(pivotValue) == true) {
+        if(includesValue(pivotValue)) {
             while (current != null) {
                 if (this.head.data == pivotValue) {
                     append(insertValue);
@@ -71,6 +71,8 @@ public class LinkedList
                 }
                 current = current.next;
             }
+        } else {
+            throw new IllegalStateException("InListVal is not in Linked List");
         }
     }
 
@@ -78,7 +80,7 @@ public class LinkedList
     public void insertAfter(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
-        if(includesValue(pivotValue) == true) {
+        if(includesValue(pivotValue)) {
             while (current != null) {
                 if (current.data == pivotValue) {
                     if (current.next == null) {
@@ -90,22 +92,11 @@ public class LinkedList
                 }
                 current = current.next;
             }
+        }else {
+            throw new IllegalStateException("InListVal is not in Linked List");
         }
     }
-//    Stretch Goal Commented Out for Now.
-//    public void deleteNode(int value){
-//        Node current = this.head;
-//        if(includesValue(value) == true) {
-//            while(current != null){
-//                if(this.head.data == value){
-//                    this.head = current.next;
-//                }else if(current.next.data == value){
-//                    current.next = current.next.next;
-//                }
-//                current = current.next;
-//            }
-//        }
-//    }
+
 
     public String printLinkedList(){
         Node current = this.head;
@@ -121,6 +112,21 @@ public class LinkedList
         return ll;
     }
 
+    public int kthFromEnd(int k){
+        int size = sizeOfLinkedList();
+        int counter = size - k;
+        if(counter > 0 & k >= 0) {
+            Node current = this.head;
+            while (counter > 1) {
+                current = current.next;
+                counter--;
+            }
+            return current.data;
+        }else {
+            throw new IllegalStateException("Linked List to small for kth value.");
+        }
+    }
+
     public int sizeOfLinkedList(){
         Node current = this.head;
         int listCounter = 0;
@@ -129,5 +135,35 @@ public class LinkedList
             current = current.next;
         }
         return listCounter;
+    }
+
+    // Next code challenge.  Not implemented Tests yet.  LL Merge.
+    public static int llMerge(LinkedList ll1, LinkedList ll2){
+        if(ll1.head == null & ll2.head == null){
+            throw new IllegalStateException("Linked List to small for kth value.");
+        }else if(ll1.head == null){
+            return ll2.head.data;
+        }else if(ll2.head == null){
+            return ll1.head.data;
+        } else {
+            Node current1 = ll1.head;
+            Node current2 = ll2.head;
+            Node temp1 = current1.next;
+            Node temp2 = current2.next;
+            while(current1 != null || current2 != null || temp2 != null){
+                current1.next = current2;
+                current2.next = temp1;
+                current1 = temp1;
+                current2 = temp2;
+                temp1 = current1.next;
+                temp2 = current2.next;
+                if(temp1 == null){
+                    current1.next = current2;
+                } else if(temp2 == null){
+
+                }
+            }
+        }
+        return ll1.head.data;
     }
 }
