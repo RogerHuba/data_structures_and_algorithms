@@ -47,8 +47,11 @@ public class LinkedListTest {
     public void testInsertValueHeadMultipleCheckNext(){
         LinkedList ll = new LinkedList();
         ll.insertValue(1);
-        ll.insertValue(5);
-        ll.insertValue(10);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(12);
+        ll.insertValue(18);
+        ll.insertValue(25);
         assertEquals("Head should return 1", 1, ll.head.data);;
     }
 
@@ -192,7 +195,7 @@ public class LinkedListTest {
         assertTrue("Insert Before value 25, 20 should be in list.", ll.includesValue(20));
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void testInsertBeforeNotInListValue(){
         LinkedList ll = new LinkedList();
         ll.insertValue(3);
@@ -202,7 +205,6 @@ public class LinkedListTest {
         ll.insertValue(18);
         ll.insertValue(25);
         ll.insertBefore(20,21);
-        assertFalse("Insert Before value 21 not in list, 20 will not be added.", ll.includesValue(20));
 
     }
 
@@ -242,10 +244,10 @@ public class LinkedListTest {
         ll.insertValue(18);
         ll.insertValue(25);
         ll.insertAfter(26,25);
-        assertTrue("Insert after value 12, 10 should be in list.", ll.includesValue(25));
+        assertTrue("Insert after value 12, 10 should be in list.", ll.includesValue(26));
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void testInsertAfterPivotNotInList(){
         LinkedList ll = new LinkedList();
         ll.insertValue(3);
@@ -255,47 +257,53 @@ public class LinkedListTest {
         ll.insertValue(18);
         ll.insertValue(25);
         ll.insertAfter(11,10);
-        assertFalse("Insert after value 10, 11 should not be in list.", ll.includesValue(4));
     }
 
-//    Stretch Goal Commented Out
-//    @Test
-//    public void testDeleteNodeHead(){
-//        LinkedList ll = new LinkedList();
-//        ll.insertValue(3);
-//        ll.insertValue(7);
-//        ll.insertValue(9);
-//        ll.insertValue(12);
-//        ll.insertValue(18);
-//        ll.insertValue(25);
-//        ll.deleteNode(3);
-//        assertTrue("New head should be 7.", ll.head.data == 7);
-//    }
-//
-//    @Test
-//    public void testDeleteNodeMiddle(){
-//        LinkedList ll = new LinkedList();
-//        ll.insertValue(3);
-//        ll.insertValue(7);
-//        ll.insertValue(9);
-//        ll.insertValue(12);
-//        ll.insertValue(18);
-//        ll.insertValue(25);
-//        ll.deleteNode(3);
-//        assertFalse("Delete node value 12, not in list.", ll.includesValue(12));
-//    }
-//
-//    @Test
-//    public void testDeleteNodeEnd(){
-//        LinkedList ll = new LinkedList();
-//        ll.insertValue(3);
-//        ll.insertValue(7);
-//        ll.insertValue(9);
-//        ll.insertValue(12);
-//        ll.insertValue(18);
-//        ll.insertValue(25);
-//        ll.deleteNode(25);
-//        assertFalse("Delete node value 25, not in list.", ll.includesValue(25));
-//    }
+    @Test
+    public void testKthFromEndLastInList(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(12);
+        ll.insertValue(18);
+        ll.insertValue(25);
+        assertEquals("Last Item in List is 0", ll.kthFromEnd(0), 25);
+    }
 
+    @Test
+    public void testKthFromEndFirstInList(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(12);
+        ll.insertValue(18);
+        ll.insertValue(25);
+        assertEquals("Last Item in List is 0", ll.kthFromEnd(5), 3);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testKthFromEndNotInList(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(12);
+        ll.insertValue(18);
+        ll.insertValue(25);
+        ll.kthFromEnd(6);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testKthFromEndNotInListNegative(){
+        LinkedList ll = new LinkedList();
+        ll.insertValue(3);
+        ll.insertValue(7);
+        ll.insertValue(9);
+        ll.insertValue(12);
+        ll.insertValue(18);
+        ll.insertValue(25);
+        ll.kthFromEnd(-5);
+    }
 }

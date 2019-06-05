@@ -59,7 +59,7 @@ public class LinkedList
     public void insertBefore(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
-        if(includesValue(pivotValue) == true) {
+        if(includesValue(pivotValue)) {
             while (current != null) {
                 if (this.head.data == pivotValue) {
                     append(insertValue);
@@ -71,6 +71,8 @@ public class LinkedList
                 }
                 current = current.next;
             }
+        } else {
+            throw new IllegalStateException("InListVal is not in Linked List");
         }
     }
 
@@ -78,7 +80,7 @@ public class LinkedList
     public void insertAfter(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
-        if(includesValue(pivotValue) == true) {
+        if(includesValue(pivotValue)) {
             while (current != null) {
                 if (current.data == pivotValue) {
                     if (current.next == null) {
@@ -90,22 +92,11 @@ public class LinkedList
                 }
                 current = current.next;
             }
+        }else {
+            throw new IllegalStateException("InListVal is not in Linked List");
         }
     }
-//    Stretch Goal Commented Out for Now.
-//    public void deleteNode(int value){
-//        Node current = this.head;
-//        if(includesValue(value) == true) {
-//            while(current != null){
-//                if(this.head.data == value){
-//                    this.head = current.next;
-//                }else if(current.next.data == value){
-//                    current.next = current.next.next;
-//                }
-//                current = current.next;
-//            }
-//        }
-//    }
+
 
     public String printLinkedList(){
         Node current = this.head;
@@ -119,6 +110,21 @@ public class LinkedList
             current = current.next;
         }
         return ll;
+    }
+
+    public int kthFromEnd(int k){
+        int size = sizeOfLinkedList();
+        int counter = size - k;
+        if(counter > 0 & k >= 0) {
+            Node current = this.head;
+            while (counter > 1) {
+                current = current.next;
+                counter--;
+            }
+            return current.data;
+        }else {
+            throw new IllegalStateException("InListVal is not in Linked List");
+        }
     }
 
     public int sizeOfLinkedList(){
