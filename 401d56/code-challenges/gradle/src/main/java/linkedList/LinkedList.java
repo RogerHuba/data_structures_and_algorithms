@@ -137,33 +137,30 @@ public class LinkedList
         return listCounter;
     }
 
-    // Next code challenge.  Not implemented Tests yet.  LL Merge.
-    public static int llMerge(LinkedList ll1, LinkedList ll2){
-        if(ll1.head == null & ll2.head == null){
-            throw new IllegalStateException("Linked List to small for kth value.");
+    public static LinkedList llMerge(LinkedList ll1, LinkedList ll2){
+        if(ll1.head == null && ll2.head == null){
+            return ll1;
         }else if(ll1.head == null){
-            return ll2.head.data;
+            return ll2;
         }else if(ll2.head == null){
-            return ll1.head.data;
-        } else {
-            Node current1 = ll1.head;
-            Node current2 = ll2.head;
-            Node temp1 = current1.next;
-            Node temp2 = current2.next;
-            while(current1 != null || current2 != null || temp2 != null){
-                current1.next = current2;
-                current2.next = temp1;
-                current1 = temp1;
-                current2 = temp2;
-                temp1 = current1.next;
-                temp2 = current2.next;
-                if(temp1 == null){
-                    current1.next = current2;
-                } else if(temp2 == null){
+            return ll1;
+        }else{
+                Node current1 = ll1.head, current2 = ll2.head;
+                Node temp1 = current1.next, temp2 = current2.next;
 
+                while((current1 != null) && (current2 != null)){
+                    current1.next = current2;
+                    current2.next = temp1;
+                    current1 = temp1;
+                    current2 = temp2;
+                    if(temp1 != null) {
+                        temp1 = current1.next;
+                    }
+                    if(temp2 != null){
+                    temp2 = current2.next;
+                    }
                 }
             }
+        return ll1;
         }
-        return ll1.head.data;
     }
-}
