@@ -17,3 +17,4 @@ Append - Will add to end and create a new head
 InsertBefore - Will insert a value before a given value.
 InsertAfter - Will insert a value after a given value.
 kthFromEnd - Will return the node value at k from the end
+ll_merge - Will "zip" 2 link lists and return the combined list.

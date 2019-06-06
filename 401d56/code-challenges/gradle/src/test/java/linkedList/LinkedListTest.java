@@ -18,8 +18,6 @@ public class LinkedListTest {
         assertNull("Linked List should not be null", ll.head);
     }
 
-
-
     @Test
     public void testInsertValueHeadSingle(){
         LinkedList ll = new LinkedList();
@@ -105,7 +103,7 @@ public class LinkedListTest {
         ll.insertValue(1);
         ll.insertValue(5);
         ll.insertValue(8);
-        assertTrue("Should return True as the size is 3", ll.sizeOfLinkedList() == 3);
+        assertEquals("Return value is 3.", 3, ll.sizeOfLinkedList());
     }
 
     @Test
@@ -114,7 +112,7 @@ public class LinkedListTest {
         ll.insertValue(1);
         ll.insertValue(5);
         ll.insertValue(8);
-        assertFalse("Should return False as the true size is 3 not 4", ll.sizeOfLinkedList() == 4);
+        assertNotEquals("Return value is 3 not 4", 4, ll.sizeOfLinkedList());
     }
 
     @Test
@@ -324,5 +322,113 @@ public class LinkedListTest {
         ll.insertValue(18);
         ll.insertValue(25);
         ll.kthFromEnd(-5);
+    }
+
+    @Test
+    public void testLinkListsPopulated(){
+        LinkedList ll1 = new LinkedList();
+        ll1.insertValue(1);
+        ll1.insertValue(3);
+        ll1.insertValue(5);
+        ll1.insertValue(7);
+        ll1.insertValue(9);
+        ll1.insertValue(11);
+        LinkedList ll2 = new LinkedList();
+        ll2.insertValue(2);
+        ll2.insertValue(4);
+        ll2.insertValue(6);
+        ll2.insertValue(8);
+        ll2.insertValue(10);
+        assertEquals("LL1 populated", "LinkedList: 1->3->5->7->9->11", ll1.printLinkedList());
+        assertEquals("LL2 populated", "LinkedList: 2->4->6->8->10", ll2.printLinkedList());
+    }
+
+    @Test
+    public void testZipListL1Longer(){
+        LinkedList ll1 = new LinkedList();
+        ll1.insertValue(1);
+        ll1.insertValue(3);
+        ll1.insertValue(5);
+        ll1.insertValue(7);
+        ll1.insertValue(9);
+        ll1.insertValue(11);
+        ll1.insertValue(13);
+        LinkedList ll2 = new LinkedList();
+        ll2.insertValue(2);
+        ll2.insertValue(4);
+        LinkedList.llMerge(ll1, ll2);
+        assertEquals("Head should be 1", 1, ll1.head.data);
+        assertEquals("Head.next should be 2", 2, ll1.head.next.data);
+    }
+
+    @Test
+    public void testZipListL2Longer(){
+        LinkedList ll1 = new LinkedList();
+        ll1.insertValue(1);
+        ll1.insertValue(3);
+        LinkedList ll2 = new LinkedList();
+        ll2.insertValue(2);
+        ll2.insertValue(4);
+        ll2.insertValue(6);
+        ll2.insertValue(8);
+        ll2.insertValue(10);
+        ll2.insertValue(12);
+        ll2.insertValue(14);
+        LinkedList.llMerge(ll1, ll2);
+        assertEquals("Head should be 1", 1, ll1.head.data);
+        assertEquals("Head.next should be 2", 2, ll1.head.next.data);
+
+    }
+
+    @Test
+    public void testZipListL1Empty(){
+        LinkedList ll1 = new LinkedList();
+        LinkedList ll2 = new LinkedList();
+        ll2.insertValue(2);
+        ll2.insertValue(4);
+        ll2.insertValue(6);
+        ll2.insertValue(8);
+        ll2.insertValue(10);
+        LinkedList.llMerge(ll1, ll2);
+        assertEquals("Head should be 2", 2, ll2.head.data);
+    }
+
+    @Test
+    public void testZipListL2Empty(){
+        LinkedList ll1 = new LinkedList();
+        ll1.insertValue(1);
+        ll1.insertValue(3);
+        ll1.insertValue(5);
+        ll1.insertValue(7);
+        ll1.insertValue(9);
+        ll1.insertValue(11);
+        LinkedList ll2 = new LinkedList();
+        LinkedList.llMerge(ll1, ll2);
+        assertEquals("Head should be 1", 1, ll1.head.data);
+    }
+
+    @Test
+    public void testZipListL1L1Same(){
+        LinkedList ll1 = new LinkedList();
+        ll1.insertValue(1);
+        ll1.insertValue(3);
+        ll1.insertValue(5);
+        ll1.insertValue(7);
+        LinkedList ll2 = new LinkedList();
+        ll2.insertValue(2);
+        ll2.insertValue(4);
+        ll2.insertValue(6);
+        ll2.insertValue(8);
+        LinkedList.llMerge(ll1, ll2);
+        assertEquals("Head should be 1", 1, ll1.head.data);
+        assertEquals("Head should be 2", 2, ll1.head.next.data);
+    }
+
+    @Test
+    public void testZipL1L2Empty(){
+        LinkedList ll1 = new LinkedList();
+        LinkedList ll2 = new LinkedList();
+        LinkedList.llMerge(ll1, ll2);
+        assertNull("Head should be Null", ll1.head);
     }
 }
