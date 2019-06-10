@@ -17,7 +17,7 @@ public class StackTest {
     public void addToEmptyStack(){
         Stack newStack = new Stack();
         newStack.add(10);
-        assertEquals("The top should be 10", 10, newStack.top.data);
+        assertEquals("The top should be 10", 10, newStack.front.data);
     }
 
     @Test
@@ -27,8 +27,8 @@ public class StackTest {
         newStack.add(18);
         newStack.add(3988);
         newStack.add(1);
-        assertEquals("The top should be 10", 1, newStack.top.data);
-        assertEquals("The top next should be 3988", 3988, newStack.top.next.data);
+        assertEquals("The top should be 10", 1, newStack.front.data);
+        assertEquals("The top next should be 3988", 3988, newStack.front.next.data);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class StackTest {
         newStack.add(3988);
         newStack.add(1);
         newStack.remove();
-        assertEquals("The new top should be 3988", 3988, newStack.top.data);
+        assertEquals("The new top should be 3988", 3988, newStack.front.data);
     }
 
     @Test(expected=NullPointerException.class)
@@ -47,16 +47,16 @@ public class StackTest {
         newStack.add(10);
         newStack.add(15);
         newStack.remove();
-        assertEquals("The new top should be 10", 10, newStack.top.data);
+        assertEquals("The new top should be 10", 10, newStack.front.data);
         newStack.remove();
-        assertEquals("The new top should be Null", null, newStack.top.data);
+        assertEquals("The new top should be Null", null, newStack.front.data);
     }
 
     @Test(expected=NullPointerException.class)
     public void removeFromStackEmpty(){
         Stack newStack = new Stack();
         newStack.remove();
-        assertEquals("The new top should be 10", null, newStack.top.data);
+        assertEquals("The new top should be 10", null, newStack.front.data);
     }
 
     @Test
