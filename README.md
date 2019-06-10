@@ -33,6 +33,15 @@ Data Structures
     - [Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     ![ll_merge]
 
+4.  Stacks and Queue
+    - [Readme](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/README.md)
+    - [Code Files]
+        - [Node](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Node.java)
+        - [Stack](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Stack.java)
+        - [Queue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Queue.java)
+
+
+
 
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg
