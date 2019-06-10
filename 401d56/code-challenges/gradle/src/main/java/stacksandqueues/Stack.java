@@ -1,14 +1,53 @@
 package stacksandqueues;
 
 public class Stack {
+
+    Node top;
+
+    // push onto a stack
+    public void add(int data){
+        Node newNode = new Node(data);
+        if(this.top == null){
+            top = newNode;
+        }else {
+            newNode.next = this.top;
+            this.top = newNode;
+        }
+    }
+
+    // pop off a stack
+    int remove() {
+        int data = 0;
+        try {
+            data = this.top.data;
+            this.top = this.top.next;
+        } catch(NullPointerException e) {
+
+        }
+        return data;
+    }
+
+    // peek the top node
+    public int peekTopOfStack(){
+        int data = 0;
+        try {
+            data =  this.top.data;
+        } catch(NullPointerException e){
+
+        }
+        return data;
+    }
+
+    // Checks to see if the Stack is empty
+    public boolean isEmpty(){
+        if(this.top == null){
+            return true;
+        }
+        return false;
+    }
+
+    // stack size
+    public int sizeOfStack(){
+        return 0;
+    }
 }
-
-
-//    Create a Stack class that has a top property. It creates an empty Stack when instantiated.
-//        This object should be aware of a default empty value assigned to top when the stack is created.
-//        Define a method called push which takes any value as an argument and adds a new node with that value to the
-//        top of the stack with an O(1) Time performance.
-//        Define a method called pop that does not take any argument, removes the node from the top of the stack, and
-//        returns the node’s value.
-//        Define a method called peek that does not take an argument and returns the value of the node located on top
-//        of the stack, without removing it from the stack.

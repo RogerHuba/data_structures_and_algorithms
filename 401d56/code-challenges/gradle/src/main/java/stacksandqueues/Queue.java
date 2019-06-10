@@ -1,6 +1,53 @@
 package stacksandqueues;
 
 public class Queue {
+
+    Node head; // Remove from the head
+    Node tail;
+
+    public void enQueue(int data){
+        Node newNode = new Node(data);
+        if(this.tail != null){
+            this.tail.next = newNode;
+        }
+        this.tail = newNode;
+        if(this.head == null){
+            this.head = newNode;
+        }
+    }
+
+    public int deQueue(){
+        int data = this.head.data;
+        this.head = this.head.next;
+        if(this.head == null){
+            this.tail = null;
+        }
+        return data;
+    }
+
+
+    public int peekTopOfQueue(){
+        if(this.head == null){
+            System.out.println("Cannot Peek an empty Queue");
+            // Need a real exception handler here
+        }
+        return this.head.data;
+    }
+
+
+    public boolean isEmpty(){
+        if(this.head == null){
+            return true;
+        }
+        return false;
+    }
+
+    // stack size
+    public int sizeOfQueue(){
+        return 0;
+    }
+
+
 }
 
 //

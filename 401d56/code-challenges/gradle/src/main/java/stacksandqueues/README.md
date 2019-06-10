@@ -21,3 +21,7 @@ Node.java, stack.java, queue.java.
 ## Version
 06-10-2019
 1.0.0 - Initial Setup and Scaffold.
+
+## Credits
+Reviewed video at
+https://www.youtube.com/watch?v=wjI1WNcIntg
