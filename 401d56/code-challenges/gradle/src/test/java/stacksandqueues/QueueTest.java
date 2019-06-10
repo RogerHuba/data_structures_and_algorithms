@@ -15,28 +15,68 @@ public class QueueTest {
         Queue newQueue = new Queue();
         newQueue.enQueue(10);
         assertEquals("The top should be 10", 10, newQueue.head.data);
-
     }
 
-    // Push on to a queue single value
-    // empty queue
-    // queue of 1
-    // queue of many
+    @Test
+    public void addMultipleToQueue(){
+        Queue newQueue = new Queue();
+        newQueue.enQueue(1);
+        newQueue.enQueue(15);
+        newQueue.enQueue(16);
+        newQueue.enQueue(19);
+        assertEquals("The top should be 10", 1, newQueue.head.data);
+    }
 
-    // enqueue multiple values onto a queue
-    // empty queue
-    // queue of 1
-    // queue of many
 
-    // dequeue a value off a queue
-    // empty queue
-    // queue of 1
-    // queue of many
+    @Test
+    public void addToQueueMany(){
+        Queue newQueue = new Queue();
+        newQueue.enQueue(10);
+        newQueue.enQueue(18);
+        newQueue.enQueue(3988);
+        newQueue.enQueue(1);
+        assertEquals("The top should be 10", 10, newQueue.head.data);
+    }
 
-    // empty a queue
+    @Test
+    public void removeFromQueuePopulatedPass(){
+        Queue newQueue = new Queue();
+        newQueue.enQueue(10);
+        newQueue.enQueue(13);
+        newQueue.enQueue(15);
+        newQueue.enQueue(19);
+        newQueue.deQueue();
+        newQueue.deQueue();
+        newQueue.deQueue();
+        assertEquals("The new top should be 3988", 19, newQueue.head.data);
+    }
 
-    // Peek an item on the queue
+    @Test
+    public void removeFromQueuePopulatedFail(){
+        Queue newQueue = new Queue();
+        newQueue.enQueue(10);
+        newQueue.enQueue(13);
+        newQueue.enQueue(15);
+        newQueue.enQueue(19);
+        newQueue.deQueue();
+        newQueue.deQueue();
+        newQueue.deQueue();
+        assertNotEquals("The new top should be 3988", 15, newQueue.head.data);
+    }
 
-    // Instantiate an empty queue
+    @Test
+    public void testIsQueueNotEmpty(){
+        Queue newQueue = new Queue();
+        newQueue.enQueue(10);
+        boolean empty = newQueue.isEmpty();
+        assertFalse("The Queue is not empty", empty);
+    }
+
+    @Test
+    public void testIsQueueEmpty(){
+        Queue newQueue = new Queue();
+        boolean empty = newQueue.isEmpty();
+        assertTrue("The Queue is not empty", empty);
+    }
 
 }

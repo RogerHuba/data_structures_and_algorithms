@@ -50,7 +50,6 @@ public class StackTest {
         assertEquals("The new top should be 10", 10, newStack.top.data);
         newStack.remove();
         assertEquals("The new top should be Null", null, newStack.top.data);
-
     }
 
     @Test(expected=NullPointerException.class)
@@ -58,7 +57,6 @@ public class StackTest {
         Stack newStack = new Stack();
         newStack.remove();
         assertEquals("The new top should be 10", null, newStack.top.data);
-
     }
 
     @Test
@@ -90,12 +88,11 @@ public class StackTest {
         boolean empty = newStack.isEmpty();
         assertFalse("The Stack is not empty", empty);
     }
-    
+
     @Test
     public void testIsStackEmpty(){
         Stack newStack = new Stack();
         boolean empty = newStack.isEmpty();
         assertTrue("The Stack is not empty", empty);
     }
-
 }
