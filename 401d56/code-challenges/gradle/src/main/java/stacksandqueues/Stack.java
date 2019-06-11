@@ -1,12 +1,12 @@
 package stacksandqueues;
 
-public class Stack {
+public class Stack<T> {
 
-    Node front;
+    Node<T> front;
 
     // push onto a stack
-    public void add(int data){
-        Node newNode = new Node(data);
+    public void add(T data){
+        Node<T> newNode = new Node<>(data);
         if(this.front == null){
             front = newNode;
         }else {
@@ -16,8 +16,8 @@ public class Stack {
     }
 
     // pop off a stack
-    int remove() {
-        int data = 0;
+    T remove() {
+        T data = null;
         try {
             data = this.front.data;
             this.front = this.front.next;
@@ -27,9 +27,9 @@ public class Stack {
         return data;
     }
 
-    // peek the top node
-    public int peekTopOfStack(){
-        int data = 0;
+    // peek the top node`
+    T peekTopOfStack(){
+        T data = null;
         try {
             data =  this.front.data;
         } catch(NullPointerException e){
@@ -39,7 +39,7 @@ public class Stack {
     }
 
     // Checks to see if the Stack is empty
-    public boolean isEmpty(){
+    boolean isEmpty(){
         if(this.front == null){
             return true;
         }
