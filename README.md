@@ -39,7 +39,8 @@ Data Structures
         - [Node](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Node.java)
         - [Stack](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Stack.java)
         - [Queue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Queue.java)
-
+        - [PseudoQueue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/queueWithStacks.java)
+    ![queue_with_stacks]
 
 
 
@@ -48,3 +49,4 @@ Data Structures
 [LinkedListInsertion]: ./401d56/assets/linked_list_insertion.jpeg
 [KthFromEnd]: ./401d56/assets/KthFromEnd.JPG
 [ll_merge]: ./401d56/assets/ll_merge.jpeg
+[queue_with_stacks]: ./401d56/assets/queue_with_stacks.jpeg
