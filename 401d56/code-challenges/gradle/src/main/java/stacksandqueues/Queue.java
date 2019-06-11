@@ -1,12 +1,12 @@
 package stacksandqueues;
 
-public class Queue {
+public class Queue<T> {
 
-    Node head; // Remove from the head
-    Node tail;
+    Node<T> head; // Remove from the head
+    Node<T> tail;
 
-    public void enQueue(int data){
-        Node newNode = new Node(data);
+    public void enQueue(T data){
+        Node<T> newNode = new Node<>(data);
         if(this.tail != null){
             this.tail.next = newNode;
         }
@@ -16,8 +16,8 @@ public class Queue {
         }
     }
 
-    public int deQueue(){
-        int data = this.head.data;
+    public T deQueue(){
+        T data = this.head.data;
         this.head = this.head.next;
         if(this.head == null){
             this.tail = null;
@@ -26,7 +26,7 @@ public class Queue {
     }
 
 
-    public int peekTopOfQueue(){
+    public T peekTopOfQueue(){
         if(this.head == null){
             System.out.println("Cannot Peek an empty Queue");
             // Need a real exception handler here
