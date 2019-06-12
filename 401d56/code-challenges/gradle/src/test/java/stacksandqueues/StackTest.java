@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 public class StackTest {
 
     private void makeNode(){
+
         Stack<Integer> newStack = new Stack<>();
     }
 
