@@ -33,7 +33,7 @@ Data Structures
     - [Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     ![ll_merge]
 
-4.  Stacks and Queue
+5.  Stacks and Queue
     - [Readme](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/README.md)
     - [Code Files]
         - [Node](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Node.java)
@@ -41,7 +41,9 @@ Data Structures
         - [Queue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Queue.java)
         - [PseudoQueue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/queueWithStacks.java)
     ![queue_with_stacks]
-
+        - [Animal Shelter](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/AnimalShelter.java)
+    ![fifo_animal]
+   
 
 
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
@@ -50,3 +52,4 @@ Data Structures
 [KthFromEnd]: ./401d56/assets/KthFromEnd.JPG
 [ll_merge]: ./401d56/assets/ll_merge.jpeg
 [queue_with_stacks]: ./401d56/assets/queue_with_stacks.jpeg
+[fifi_animal]: ./401d56/assets/fifo_animal.jpeg
