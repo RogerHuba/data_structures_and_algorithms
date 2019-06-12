@@ -7,6 +7,7 @@ Follows a standard GitHub workflow for cloning and requiring implementations usi
 ## Table of Contents
 Data Structures
 
+<<<<<<< Updated upstream
 1.  ArrayReverse - No Picture
     - [Readme](./401d56/code-challenges/ArrayReverse/README.md)
     - [Code](./401d56/code-challenges/ArrayReverse/ArrayReverse.java)
@@ -21,6 +22,27 @@ Data Structures
     - [Readme](./401d56/code-challenges/gradle/src/main/java/README_BinarySearch.md)
     - [Code](./401d56/code-challenges/gradle/src/main/java/BinarySearch.java)
     ![BinarySearch]
+=======
+1.  Arrays
+    - ArrayReverse - No Picture
+        - [Readme](./401d56/code-challenges/ArrayReverse/README.md)
+        - [Code](./401d56/code-challenges/ArrayReverse/ArrayReverse.java)
+        - No White Board  
+    - Array Shift 
+        - [Readme](./401d56/code-challenges/gradle/src/main/java/README_ArrayShift.md)
+        - [Code](./401d56/code-challenges/gradle/src/main/java/ArrayShift.java)
+        ![ArrayShift]
+    - Binary Search 
+        - [Readme](./401d56/code-challenges/gradle/src/main/java/README_BinarySearch.md)
+        - [Code](./401d56/code-challenges/gradle/src/main/java/BinarySearch.java)
+        ![BinarySearch]
+    
+2.   Linked Lists
+    - Node Setup
+        - [Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
+        - [Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
+            - No White Board
+>>>>>>> Stashed changes
 
 4.  Linked List - 
     - [Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
