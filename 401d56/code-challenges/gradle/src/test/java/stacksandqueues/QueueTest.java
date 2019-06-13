@@ -98,4 +98,19 @@ public class QueueTest {
         assertTrue("The Queue is not empty", empty);
     }
 
+    @Test(expected=IllegalStateException.class)
+    public void testPeekQueueEmpty(){
+        Queue<Integer> newQueue = makeQueue();
+        newQueue.peek();
+    }
+
+    @Test
+    public void testPeekQueueTwoInQueue(){
+        Queue<Integer> newQueue = makeQueue();
+        addNodesTwo(newQueue);
+        newQueue.peek();
+        int value = newQueue.head.data;
+        assertEquals("The new top should be 5", 5, value);
+
+    }
 }

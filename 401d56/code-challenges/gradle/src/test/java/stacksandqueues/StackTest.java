@@ -87,7 +87,7 @@ public class StackTest {
     public void peekStackPass(){
         Stack<Integer> newStack = makeStack();
         addNodesMultiple(newStack);
-        int value = newStack.peekTopOfStack();
+        int value = newStack.peek();
         assertEquals("Peek should return 30", 30, value);
     }
 
@@ -95,7 +95,7 @@ public class StackTest {
     public void peekStackFail(){
         Stack<Integer> newStack = makeStack();
         addNodesMultiple(newStack);
-        int value = newStack.peekTopOfStack();
+        int value = newStack.peek();
         assertNotEquals("Peek should return 10", 10, value);
     }
 
