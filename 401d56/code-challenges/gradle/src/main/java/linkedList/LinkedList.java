@@ -136,7 +136,6 @@ public class LinkedList
         }
         return listCounter;
     }
-<<<<<<< Updated upstream
 
     public static LinkedList llMerge(LinkedList ll1, LinkedList ll2){
         if(ll1.head == null && ll2.head == null){
@@ -165,6 +164,3 @@ public class LinkedList
         return ll1;
         }
     }
-=======
-}
->>>>>>> Stashed changes

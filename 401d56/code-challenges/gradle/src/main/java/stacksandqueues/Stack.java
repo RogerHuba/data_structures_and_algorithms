@@ -5,7 +5,7 @@ public class Stack<T> {
     Node<T> front;
 
     // push onto a stack
-    public void add(T data){
+    public void push(T data){
         Node<T> newNode = new Node<>(data);
         if(this.front == null){
             front = newNode;
@@ -16,7 +16,7 @@ public class Stack<T> {
     }
 
     // pop off a stack
-    T remove() {
+    T pop() {
         T data = null;
         try {
             data = this.front.data;

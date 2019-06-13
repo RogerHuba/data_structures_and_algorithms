@@ -4,29 +4,28 @@ import static org.junit.Assert.*;
 
 
 public class StackTest {
-
     private Stack<Integer> makeStack(){
         Stack<Integer> newStack = new Stack<>();
         return newStack;
     }
 
     private Stack<Integer> addNodesSingle(Stack newStack){
-        newStack.add(5);
+        newStack.push(5);
         return newStack;
     }
 
     private Stack<Integer> addNodesTwo(Stack newStack){
-        newStack.add(5);
-        newStack.add(10);
+        newStack.push(5);
+        newStack.push(10);
         return newStack;
     }
 
     private Stack<Integer> addNodesMultiple(Stack newStack){
-        newStack.add(10);
-        newStack.add(15);
-        newStack.add(20);
-        newStack.add(25);
-        newStack.add(30);
+        newStack.push(10);
+        newStack.push(15);
+        newStack.push(20);
+        newStack.push(25);
+        newStack.push(30);
         return newStack;
     }
 
@@ -59,7 +58,7 @@ public class StackTest {
     public void removeFromStackPopulated(){
         Stack<Integer> newStack = makeStack();
         addNodesMultiple(newStack);
-        newStack.remove();
+        newStack.pop();
         int value = newStack.front.data;
         assertEquals("The new top should be 25", 25, value);
     }
@@ -68,10 +67,10 @@ public class StackTest {
     public void removeFromStackOfOne(){
         Stack<Integer> newStack = makeStack();
         addNodesTwo(newStack);
-        newStack.remove();
+        newStack.pop();
         int value = newStack.front.data;
         assertEquals("The new top should be 5", 5, value);
-        newStack.remove();
+        newStack.pop();
         value = newStack.front.data;
         assertNull("The new top should be Null", value);
     }
@@ -79,7 +78,7 @@ public class StackTest {
     @Test(expected=NullPointerException.class)
     public void removeFromStackEmpty(){
         Stack<Integer> newStack = makeStack();
-        newStack.remove();
+        newStack.pop();
         assertNull("The new top should be Null", newStack.front.data);
     }
 
