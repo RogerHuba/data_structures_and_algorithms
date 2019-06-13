@@ -41,70 +41,76 @@ public class StackTest {
     public void addToEmptyStack(){
         Stack<Integer> newStack = makeStack();
         addNodesSingle(newStack);
-        assertEquals("Should be 5", 5, newStack.front);
+        int value = newStack.front.data;
+        assertEquals("Should be 5", 5, value);
     }
-//
-//    @Test
-//    public void addToStackMany(){
-//        makeNode();
-//        addNodesMultiiple();
-//        assertEquals("The top should be 10", 1, newStack.front.data);
-//        assertEquals("The top next should be 3988", 3988, newStack.front.next.data);
-//    }
-//
-//    @Test
-//    public void removeFromStackPopulated(){
-//        makeNode();
-//        addNodesMultiiple();
-//        newStack.remove();
-//        assertEquals("The new top should be 3988", 3988, newStack.front.data);
-//    }
-//
-//    @Test(expected=NullPointerException.class)
-//    public void removeFromStackOfOne(){
-//        makeNode();
-//        addNodesTwo();
-//        newStack.remove();
-//        assertEquals("The new top should be 10", 10, newStack.front.data);
-//        newStack.remove();
-//        assertEquals("The new top should be Null", null, newStack.front.data);
-//    }
-//
-//    @Test(expected=NullPointerException.class)
-//    public void removeFromStackEmpty(){
-//        makeNode();
-//        newStack.remove();
-//        assertEquals("The new top should be 10", null, newStack.front.data);
-//    }
-//
-//    @Test
-//    public void peekStackPass(){
-//        makeNode();
-//        addNodesMultiple();
-//        int value = newStack.peekTopOfStack();
-//        assertEquals("Peek should return 1", 1, value);
-//    }
-//
-//    @Test
-//    public void peekStackFail(){
-//        makeNode();
-//        addNodesMultiple();
-//        int value = newStack.peekTopOfStack();
-//        assertNotEquals("Peek should return 1", 10, value);
-//    }
-//
-//    @Test
-//    public void testIsStackNotEmpty(){
-//        makeNode();
-//        addNodesMultiple();
-//        boolean empty = newStack.isEmpty();
-//        assertFalse("The Stack is not empty", empty);
-//    }
-//
-//    @Test
-//    public void testIsStackEmpty(){
-//        makeNode();
-//        boolean empty = newStack.isEmpty();
-//        assertTrue("The Stack is not empty", empty);
-//    }
+
+    @Test
+    public void addToStackMany(){
+        Stack<Integer> newStack = makeStack();
+        addNodesMultiple(newStack);
+        int value = newStack.front.data;
+        int nextValue = newStack.front.next.data;
+        assertEquals("The top should be 30", 30, value);
+        assertEquals("The top next should be 25", 25, nextValue);
+    }
+
+    @Test
+    public void removeFromStackPopulated(){
+        Stack<Integer> newStack = makeStack();
+        addNodesMultiple(newStack);
+        newStack.remove();
+        int value = newStack.front.data;
+        assertEquals("The new top should be 25", 25, value);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void removeFromStackOfOne(){
+        Stack<Integer> newStack = makeStack();
+        addNodesTwo(newStack);
+        newStack.remove();
+        int value = newStack.front.data;
+        assertEquals("The new top should be 5", 5, value);
+        newStack.remove();
+        value = newStack.front.data;
+        assertNull("The new top should be Null", value);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void removeFromStackEmpty(){
+        Stack<Integer> newStack = makeStack();
+        newStack.remove();
+        assertNull("The new top should be Null", newStack.front.data);
+    }
+
+    @Test
+    public void peekStackPass(){
+        Stack<Integer> newStack = makeStack();
+        addNodesMultiple(newStack);
+        int value = newStack.peek();
+        assertEquals("Peek should return 30", 30, value);
+    }
+
+    @Test
+    public void peekStackFail(){
+        Stack<Integer> newStack = makeStack();
+        addNodesMultiple(newStack);
+        int value = newStack.peek();
+        assertNotEquals("Peek should return 10", 10, value);
+    }
+
+    @Test
+    public void testIsStackNotEmpty(){
+        Stack<Integer> newStack = makeStack();
+        addNodesMultiple(newStack);
+        boolean empty = newStack.isEmpty();
+        assertFalse("The Stack is not empty", empty);
+    }
+
+    @Test
+    public void testIsStackEmpty(){
+        Stack<Integer> newStack = makeStack();
+        boolean empty = newStack.isEmpty();
+        assertTrue("The Stack is not empty", empty);
+    }
 }

@@ -28,12 +28,12 @@ public class Stack<T> {
     }
 
     // peek the top node`
-    T peekTopOfStack(){
-        T data = null;
-        try {
-            data =  this.front.data;
-        } catch(NullPointerException e){
-
+    T peek(){
+        T data;
+        if(this.front == null){
+            throw new IllegalStateException("Cannot peek at an empty Queue");
+        } else {
+            data = this.front.data;
         }
         return data;
     }
