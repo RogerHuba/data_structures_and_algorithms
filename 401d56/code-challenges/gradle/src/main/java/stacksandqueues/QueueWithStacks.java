@@ -1,6 +1,6 @@
 package stacksandqueues;
 
-public class queueWithStacks {
+public class QueueWithStacks {
 
 
 
