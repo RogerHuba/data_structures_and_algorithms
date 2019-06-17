@@ -47,7 +47,10 @@ Data Structures
         - [Multi Bracket Validation](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/multi_bracket>validation.java)
     ![multi_bracket_validation]
 
-
+6.  Trees
+    - [Readme](./401d56/code-challenges/gradle/src/main/java/tree/README.md)
+    - [Code Files]
+        - [Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
 
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg

@@ -1,10 +1,10 @@
 package stacksandqueues;
 
 public class Node<T> {
-    protected T data;
-    protected Node<T> next;
+    public T data;
+    public Node<T> next;
 
-    Node(T data){
+    public Node(T data){
         this.data = data;
         this.next = null;
     }
