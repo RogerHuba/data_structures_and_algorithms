@@ -25,7 +25,6 @@ public class TreeTest {
         newTree.add(29);
         newTree.add(40);
         newTree.add(45);
-
         return newTree;
     }
 
@@ -90,7 +89,6 @@ public class TreeTest {
         int secondElement = newArray.get(1);
         assertEquals("The first Array Item will be 1(left)", 1, firstElement);
         assertEquals("The first Array Item will be 5", 5, secondElement);
-
     }
 
     @Test
@@ -117,6 +115,5 @@ public class TreeTest {
         System.out.println("\n\nFirst Element is: " + firstElement);
         assertEquals("The first Array Item will be 1(left)", 1, firstElement);
         assertEquals("The first Array Item will be 6", 6, secondElement);
-
     }
 }
