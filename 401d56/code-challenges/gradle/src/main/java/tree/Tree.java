@@ -1,5 +1,6 @@
 package tree;
 
+
 import java.util.ArrayList;
 
 public class Tree {
@@ -11,8 +12,8 @@ public class Tree {
         Node left;
         Node right;
 
-        Node(int value) {
-            this.data = value;
+        Node(int data) {
+            this.data = data;
             right = null;
             left = null;
         }
@@ -34,27 +35,33 @@ public class Tree {
         return current;
     }
 
-    public void add(int value) {
-        root = addNode(root, value);
+    public void add(int data) {
+        root = addNode(root, data);
     }
 
-    private boolean containsNode(Node current, int value) {
+    private boolean containsNode(Node current, int data) {
         if (current == null) {
             return false;
         }
-        if (value == current.data) {
+        if (data == current.data) {
             return true;
         }
-        return value < current.data
-                ? containsNode(current.left, value)
-                : containsNode(current.right, value);
+        if(data < current.data){
+            return containsNode(current.left, data);
+        } else {
+            return containsNode(current.right, data);
+        }
+//      The following lines of code are the same as above.  Here for training purposes.
+//        return data < current.data
+//                ? containsNode(current.left, data)
+//                : containsNode(current.right, data);
     }
 
-    boolean containsNode(int value) {
-        return containsNode(root, value);
+    boolean containsNode(int data) {
+        return containsNode(root, data);
     }
 
-    ArrayList inOrder(Node node, ArrayList newArray) {
+    ArrayList inOrder(Tree.Node node, ArrayList newArray) {
         if (node != null) {
             inOrder(node.left, newArray);
             System.out.print(" " + node.data);
@@ -64,7 +71,7 @@ public class Tree {
         return newArray;
     }
 
-    ArrayList preOrder(Node node, ArrayList newArray) {
+    ArrayList preOrder(Tree.Node node, ArrayList newArray) {
         if (node != null) {
             System.out.print(" " + node.data);
             newArray.add(node.data);
@@ -74,7 +81,7 @@ public class Tree {
         return newArray;
     }
 
-    ArrayList postOrder(Node node, ArrayList newArray) {
+    ArrayList postOrder(Tree.Node node, ArrayList newArray) {
         if (node != null) {
             postOrder(node.left, newArray);
             postOrder(node.right, newArray);
@@ -83,4 +90,5 @@ public class Tree {
         }
         return newArray;
     }
+
 }
