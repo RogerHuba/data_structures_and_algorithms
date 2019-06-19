@@ -51,7 +51,11 @@ Data Structures
     - [Readme](./401d56/code-challenges/gradle/src/main/java/tree/README.md)
     - [Code Files]
         - [Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
-
+        - [FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
+    ![fizzbuzz]
+    
+    
+    
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg
 [LinkedListInsertion]: ./401d56/assets/linked_list_insertion.jpeg
@@ -60,3 +64,4 @@ Data Structures
 [queue_with_stacks]: ./401d56/assets/queue_with_stacks.jpeg
 [fifo_animal]: ./401d56/assets/fifo_animal.jpeg
 [multi_bracket_validation]: ./401d56/assets/multi_bracket_validation.jpeg
+[fizzbuzz]: ./401d56/assets/fizz_buzz_tree.jpg

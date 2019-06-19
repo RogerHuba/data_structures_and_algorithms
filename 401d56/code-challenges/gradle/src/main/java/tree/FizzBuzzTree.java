@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class FizzBuzzTree {
 
-    private Node root;
+    Node root;
 
     class Node {
         Object data;
