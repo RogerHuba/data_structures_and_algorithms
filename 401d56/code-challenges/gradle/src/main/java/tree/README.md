@@ -10,6 +10,14 @@ Without using any builtin functionality, implement a tree.
     add a new node to the tree
     check if a value exists in the tree
     return a inorder, preorder, and postorder search
+   
+FizzBuzz
+
+Breadth First - Write a breadth first traversal method which takes a 
+    Binary Tree as its unique input. Without utilizing any of the built-in 
+    methods available to your language, traverse the input tree using a 
+    Breadth-first approach; print every visited node’s value.
+   
     
 ## Approach & Efficiency
 Time: o(n) Space: o(n)

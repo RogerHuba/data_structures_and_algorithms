@@ -116,4 +116,13 @@ public class TreeTest {
         assertEquals("The first Array Item will be 1(left)", 1, firstElement);
         assertEquals("The first Array Item will be 6", 6, secondElement);
     }
+
+    @Test
+    public void getBreadthFirst(){
+        Tree newTree = createTestTree();
+        String treeList = newTree.breadthFirst();
+        assertEquals("List equals 20 10 30 5 15 25 35 1 6 12 18 21 29 40 45 ",
+                "20 10 30 5 15 25 35 1 6 12 18 21 29 40 45 ",
+                treeList);
+    }
 }
