@@ -1,7 +1,9 @@
 package tree;
 
+import stacksandqueues.Queue;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Tree {
 
@@ -91,4 +93,26 @@ public class Tree {
         return newArray;
     }
 
+    public String breadthFirst() {
+        String treeList = "";
+        if (root == null) {
+            return "";
+        }
+        Queue<Node> nodes = new Queue<>();
+        nodes.enQueue(root);
+
+        while (!nodes.isEmpty()) {
+            Node node = nodes.deQueue();
+            treeList += node.data + " ";
+            System.out.print(node.data + "\n");
+            if (node.left != null) {
+                nodes.enQueue(node.left);
+            }
+            if (node.right!= null) {
+                nodes.enQueue(node.right);
+            }
+        }
+        System.out.println(treeList);
+        return treeList;
+    }
 }

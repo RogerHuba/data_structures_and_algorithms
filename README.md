@@ -51,7 +51,7 @@ Data Structures
         - [Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
         - [FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
     ![fizzbuzz]
-        - [BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/BreadthFirst.java)
+        - [BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/tree.java)
     ![breadth_first]
     
     
