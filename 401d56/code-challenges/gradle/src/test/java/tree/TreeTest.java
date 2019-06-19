@@ -118,7 +118,7 @@ public class TreeTest {
     }
 
     @Test
-    public void getbreadthFirst(){
+    public void getBreadthFirst(){
         Tree newTree = createTestTree();
         String treeList = newTree.breadthFirst();
         assertEquals("List equals 20 10 30 5 15 25 35 1 6 12 18 21 29 40 45 ",
