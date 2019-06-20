@@ -51,8 +51,10 @@ Data Structures
         - [Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
         - [FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
     ![fizzbuzz]
-        - [BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/tree.java)
+        - [BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
     ![breadth_first]
+        - [FindMaxValue](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+    ![find_max_value]
     
     
     
@@ -66,3 +68,4 @@ Data Structures
 [multi_bracket_validation]: ./401d56/assets/multi_bracket_validation.jpeg
 [fizzbuzz]: ./401d56/assets/fizz_buzz_tree.jpg
 [breadth_first]: ./401d56/assets/breadth_first.jpeg
+[find_max_value]: ./401d56/assets/find_max_value.jpeg
