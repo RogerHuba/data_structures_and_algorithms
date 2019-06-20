@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class Tree {
 
     protected Node root;
-
+    int maxValue = 0;
     class Node {
         int data;
         Node left;
@@ -114,5 +114,19 @@ public class Tree {
         }
         System.out.println(treeList);
         return treeList;
+    }
+
+    public int findMaxValue(Node node, ArrayList newArray){
+
+        if (node != null) {
+            findMaxValue(node.left, newArray);
+            if(node.data > maxValue){
+                maxValue = node.data;
+            }
+            System.out.print(" " + node.data);
+            newArray.add(node.data);
+            findMaxValue(node.right, newArray);
+        }
+        return maxValue;
     }
 }

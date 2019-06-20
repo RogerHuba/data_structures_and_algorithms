@@ -125,5 +125,15 @@ public class TreeTest {
                 "20 10 30 5 15 25 35 1 6 12 18 21 29 40 45 ",
                 treeList);
     }
-    // Comment to have a change for a commit
+
+    @Test
+    public void getMaxValue(){
+        // Left, Root, Right
+        Tree newTree = createTestTree();
+        ArrayList<Integer> newArray = new ArrayList<>();
+        newTree.inOrder(newTree.root, newArray);
+        int maxValue = newTree.findMaxValue(newTree.root,newArray);
+        assertEquals("Max Value should be 45", 45, maxValue);
+        assertNotEquals("Max value is 45 not 40", 40, maxValue);
+    }
 }
