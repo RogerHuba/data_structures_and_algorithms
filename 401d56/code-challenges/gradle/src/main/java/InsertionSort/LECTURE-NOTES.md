@@ -38,7 +38,7 @@ sorted array (or list) one item at a time. It is much less efficient
 on large lists than more advanced algorithms.
 
 ## Pseudocode
-
+```
   InsertionSort(int[] arr)
   
     FOR i = 1 to arr.length
@@ -51,6 +51,7 @@ on large lists than more advanced algorithms.
         j <-- j - 1
         
       arr[j + 1] <-- temp
+```
 
 ## Readings and References
 Watch
