@@ -1,8 +1,10 @@
 ## Lecture Notes: Insertion Sort
 
-Brief description of what this algorithm is, does, and why we care.
+This is a basic sorting algorithm that will sort one value at a time
+It is a straight forward sorting algorithm that is simple to understand.
 
-Is it more efficient than others? How does it attack the problem differently?
+This not a efficient sorting algorithm as it each index of the array
+could potentially be moved one at a time.
 
 ### Learning Objectives
  - What is the purpose of sorting
@@ -31,7 +33,9 @@ Is it more efficient than others? How does it attack the problem differently?
 
 
 ## Algorithm
-Describe in detail how the algorithm works. Include small code snippets to possibly support the points
+Insertion sort is a simple sorting algorithm that builds the final 
+sorted array (or list) one item at a time. It is much less efficient
+on large lists than more advanced algorithms.
 
 ## Pseudocode
 
