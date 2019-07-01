@@ -56,6 +56,11 @@ Data Structures
         - [FindMaxValue](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
     ![find_max_value]
     
+7.  Insertion Sort
+    - [Readme](401d56/code-challenges/gradle/src/main/java/InsertionSort/README.md)
+    - [LECTURE-NOTES](401d56/code-challenges/gradle/src/main/java/InsertionSort/LECTURE-NOTES.md)
+    - [Code](401d56/code-challenges/gradle/src/main/java/InsertionSort/InsertionSort.java)
+    ![insertion_sort]
     
     
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
@@ -69,3 +74,5 @@ Data Structures
 [fizzbuzz]: ./401d56/assets/fizz_buzz_tree.jpg
 [breadth_first]: ./401d56/assets/breadth_first.jpeg
 [find_max_value]: ./401d56/assets/find_max_value.jpeg
+[insertion_sort]: ./401d56/assets/insertion_sort.JPG
+
