@@ -14,7 +14,9 @@ One of the most efficient sorting solutions.
  ![MergeSort](../../../../../../assets/MergeSortVisual.png)
 ### Lecture Flow
  - Sorting
+    - Insertion Sort Review
     - Merge Sort
+    - Recursion
  - Coding Workshop
     - Testing
     
@@ -31,9 +33,9 @@ One of the most efficient sorting solutions.
 
 
 ## Algorithm
-Insertion sort is a simple sorting algorithm that builds the final 
-sorted array (or list) one item at a time. It is much less efficient
-on large lists than more advanced algorithms.
+This is a basic sorting algorithm implements a divide and conquer approach. 
+It is a recursive solution that splits an array in half until only one value is
+left.  Once it reached the single value it will begin to merge the array back.
 
 ## Pseudocode
 ```
@@ -74,12 +76,12 @@ on large lists than more advanced algorithms.
 
 ## Readings and References
 Watch
- - [Video #1](https://www.youtube.com/watch?v=KF2j-9iSf4Q)
+ - [YouTube Video](https://www.youtube.com/watch?v=KF2j-9iSf4Q)
  
 Read
- - [Article 1](https://www.geeksforgeeks.org/merge-sort/)
- - [Article 2](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)
- - [Article 3](https://www.baeldung.com/java-merge-sort)
+ - [GeeksForGeeks](https://www.geeksforgeeks.org/merge-sort/)
+ - [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)
+ - [Spring](https://www.baeldung.com/java-merge-sort)
  
 Bookmark
  - [Geeks For Geeks](https://www.geeksforgeeks.org/insertion-sort/)
