@@ -16,7 +16,7 @@ Data Structures
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/ArrayShift.java)
     - [Python Readme](./401d10/challenges/array_shift/READEME.md)
     - [Python Code](./401d10/challenges/array_shift/array_shift.py)
-    ![ArrayShift]
+![ArrayShift]
    
 3.  Binary Search 
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/README_BinarySearch.md)
@@ -24,7 +24,7 @@ Data Structures
     - [Python Readme](./401d10/challenges/array_binary_search/README.md)
     - [Python Code](./401d10/challenges/array_binary_search/array_binary_search.py)
     
-    ![BinarySearch]
+![BinarySearch]
 
 4.  Linked List - 
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
@@ -32,19 +32,19 @@ Data Structures
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
-    ![LinkedListInsertion]  
+ ![LinkedListInsertion]  
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
-    ![KthFromEnd]
+ ![KthFromEnd]
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
-    ![ll_merge]
+![ll_merge]
 
 5.  Stacks and Queue
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/README.md)
@@ -53,22 +53,22 @@ Data Structures
         - [JAVA Stack](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Stack.java)
         - [JAVA Queue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Queue.java)
         - [JAVA PseudoQueue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/queueWithStacks.java)
-    ![queue_with_stacks]
+![queue_with_stacks]
         - [JAVA Animal Shelter](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/AnimalShelter.java)
-    ![fifo_animal]
+![fifo_animal]
         - [JAVA Multi Bracket Validation](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/multi_bracket>validation.java)
-    ![multi_bracket_validation]
+![multi_bracket_validation]
 
 6.  Trees
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/tree/README.md)
     - [Code Files]
         - [JAVA Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
         - [JAVA FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
-    ![fizzbuzz]
+![fizzbuzz]
         - [JAVA BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
-    ![breadth_first]
+![breadth_first]
         - [JAVA FindMaxValue](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
-    ![find_max_value]
+![find_max_value]
     
 7.  Insertion Sort
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/InsertionSort/README.md)
@@ -77,7 +77,7 @@ Data Structures
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
-    ![insertion_sort]
+![insertion_sort]
     
 8.  Merge Sort
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/MergeSort/README.md)
@@ -86,7 +86,7 @@ Data Structures
     - [Python Readme](./401d10/challenges/merge_sort/README.md)
     - [Python Code](./401d10/challenges/merge_sort/merge_sort.py)
     - [Python Tests](./401d10/challenges/merge_sort/test_merge_sort.py)
-    ![merge_sort]
+![merge_sort]
     
 9.  Quick Sort
     - [Python Readme](./401d10/challenges/quicksort/README.md)
