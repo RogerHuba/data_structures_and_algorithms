@@ -16,6 +16,7 @@ Data Structures
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/ArrayShift.java)
     - [Python Readme](./401d10/challenges/array_shift/READEME.md)
     - [Python Code](./401d10/challenges/array_shift/array_shift.py)
+    
 ![ArrayShift]
    
 3.  Binary Search 
@@ -32,18 +33,21 @@ Data Structures
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
- ![LinkedListInsertion]  
+    
+![LinkedListInsertion]
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
- ![KthFromEnd]
+    
+![KthFromEnd]
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/linkedList/README_LinkedList.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/linkedList/LinkedList.java)
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
+    
 ![ll_merge]
 
 5.  Stacks and Queue
@@ -53,6 +57,7 @@ Data Structures
         - [JAVA Stack](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Stack.java)
         - [JAVA Queue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/Queue.java)
         - [JAVA PseudoQueue](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/queueWithStacks.java)
+
 ![queue_with_stacks]
         - [JAVA Animal Shelter](./401d56/code-challenges/gradle/src/main/java/stacksandqueues/AnimalShelter.java)
 ![fifo_animal]
@@ -62,12 +67,15 @@ Data Structures
 6.  Trees
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/tree/README.md)
     - [Code Files]
-        - [JAVA Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
-        - [JAVA FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
+    - [JAVA Tree](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+    - [JAVA FizzBuzz](./401d56/code-challenges/gradle/src/main/java/tree/FizzBuzzTree.java)
+
 ![fizzbuzz]
-        - [JAVA BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+    - [JAVA BreadthFirst](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+
 ![breadth_first]
-        - [JAVA FindMaxValue](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+    - [JAVA FindMaxValue](./401d56/code-challenges/gradle/src/main/java/tree/Tree.java)
+
 ![find_max_value]
     
 7.  Insertion Sort
