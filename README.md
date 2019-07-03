@@ -94,9 +94,12 @@ Data Structures
     - [Python Readme](./401d10/challenges/merge_sort/README.md)
     - [Python Code](./401d10/challenges/merge_sort/merge_sort.py)
     - [Python Tests](./401d10/challenges/merge_sort/test_merge_sort.py)
-![merge_sort]
     
 9.  Quick Sort
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/QuickSort/README.md)
+    - [JAVA LECTURE-NOTES](./401d56/code-challenges/gradle/src/main/java/QuickSort/LECTURE-NOTES.md)
+    - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/QuickSort/QuickSort.java)
+    - [JAVA Tests](./401d56/code-challenges/gradle/src/test/java/QuickSort/QuickSortTest.java)
     - [Python Readme](./401d10/challenges/quicksort/README.md)
     - [Python Code](./401d10/challenges/quicksort/quicksort.py)
     - [Python Tests](./401d10/challenges/quicksort/test_quicksort.py)    
@@ -113,5 +116,3 @@ Data Structures
 [fizzbuzz]: ./401d56/assets/fizz_buzz_tree.jpg
 [breadth_first]: ./401d56/assets/breadth_first.jpeg
 [find_max_value]: ./401d56/assets/find_max_value.jpeg
-[merge_sort]: ./401d10/assets/
-

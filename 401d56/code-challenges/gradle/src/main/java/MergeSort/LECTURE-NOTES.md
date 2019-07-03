@@ -11,7 +11,7 @@ One of the most efficient sorting solutions.
  - Different types of sorting
  - Demo (in action) [Demo Site](https://www.toptal.com/developers/sorting-algorithms)
     
- ![MergeSort](../../../../../../assets/MergeSortVisual.png)
+![MergeSort](../../../../../../assets/MergeSortVisual.png)
 ### Lecture Flow
  - Sorting
     - Insertion Sort Review
