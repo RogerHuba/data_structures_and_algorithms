@@ -102,7 +102,15 @@ Data Structures
     - [JAVA Tests](./401d56/code-challenges/gradle/src/test/java/QuickSort/QuickSortTest.java)
     - [Python Readme](./401d10/challenges/quicksort/README.md)
     - [Python Code](./401d10/challenges/quicksort/quicksort.py)
-    - [Python Tests](./401d10/challenges/quicksort/test_quicksort.py)    
+    - [Python Tests](./401d10/challenges/quicksort/test_quicksort.py)   
+    
+10.  Hashtables 
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
+    - [JAVA Code Node](./401d56/code-challenges/gradle/src/main/java/hashtable/Node.java)
+    - [JAVA Code Hashtable](./401d56/code-challenges/gradle/src/main/java/hashtable/Hashtable.java)
+    - [Python Readme](./401d10/data_structures/hash_table/README.md)
+    - [Python Code](./401d10/data_structures/hash_table/hash_table.py)
+    - [Python Tests](./401d10/data_structures/hash_table/test_hash_table.py)
     
     
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
