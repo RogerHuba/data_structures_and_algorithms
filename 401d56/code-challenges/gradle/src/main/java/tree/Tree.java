@@ -3,7 +3,6 @@ package tree;
 import stacksandqueues.Queue;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Tree {
 
@@ -53,10 +52,6 @@ public class Tree {
         } else {
             return containsNode(current.right, data);
         }
-//      The following lines of code are the same as above.  Here for training purposes.
-//        return data < current.data
-//                ? containsNode(current.left, data)
-//                : containsNode(current.right, data);
     }
 
     boolean containsNode(int data) {
