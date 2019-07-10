@@ -2,7 +2,7 @@ package hashtable;
 
 public class Hashtable {
 
-    private Node[] map;
+    public Node[] map;
 
     public Hashtable(int size){
         map = new Node[size];

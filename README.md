@@ -85,7 +85,6 @@ Data Structures
     - [Python Readme]
     - [Python Code]
     - [Python Tests]
-![insertion_sort]
     
 8.  Merge Sort
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/MergeSort/README.md)
@@ -112,6 +111,12 @@ Data Structures
     - [Python Code](./401d10/data_structures/hash_table/hash_table.py)
     - [Python Tests](./401d10/data_structures/hash_table/test_hash_table.py)
     
+![repeated_word]
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
+    - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/hashtable/RepeatWord.java)
+    - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/RepeatWordTest.java)
+    
+    
     
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg
@@ -124,3 +129,4 @@ Data Structures
 [fizzbuzz]: ./401d56/assets/fizz_buzz_tree.jpg
 [breadth_first]: ./401d56/assets/breadth_first.jpeg
 [find_max_value]: ./401d56/assets/find_max_value.jpeg
+[repeated_word]: ./401d56/assets/hash_repeat_words.jpeg

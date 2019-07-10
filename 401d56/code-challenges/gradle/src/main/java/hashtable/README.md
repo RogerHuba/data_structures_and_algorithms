@@ -15,3 +15,8 @@ add - Takes in both key and value.  This method should has they key, and add the
 get - Takes in the key and returns the value from the table.
 contains - takes in the key and returns a boolean, indicating if the key exists in the table.
 hash - Takes in an arbitrary key and returns an index in the collection.
+
+# Repeated Words
+Will take in a length string and return the first duplicate word.
+Time O(n)
+Space O(n^2)
