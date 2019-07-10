@@ -3,8 +3,8 @@ package hashtable;
 public class Node {
 
     private String key;
-    private String value;
-    private Node next;
+    public String value;
+    public Node next;
 
     public Node(String key, String value) {
         this.key = key;
