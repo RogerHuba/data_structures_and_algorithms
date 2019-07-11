@@ -115,8 +115,10 @@ Data Structures
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/hashtable/RepeatWord.java)
     - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/RepeatWordTest.java)
-    
-    
+![tree_intersection]
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
+    - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/hashtable/TreeIntersectiomn.java)
+    - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/TreeIntersectionTest.java)
     
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg
@@ -130,3 +132,4 @@ Data Structures
 [breadth_first]: ./401d56/assets/breadth_first.jpeg
 [find_max_value]: ./401d56/assets/find_max_value.jpeg
 [repeated_word]: ./401d56/assets/hash_repeat_words.jpeg
+[tree_intersection]: ./401d56/assets/tree_intersection.jpeg
