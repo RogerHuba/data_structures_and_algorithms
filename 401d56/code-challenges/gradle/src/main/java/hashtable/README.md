@@ -20,3 +20,8 @@ hash - Takes in an arbitrary key and returns an index in the collection.
 Will take in a length string and return the first duplicate word.
 Time O(n)
 Space O(n^2)
+
+# Tree Intersection
+Will take in 2 binary trees and return a set of values that are shared between the 2 trees.
+Time: O(n^2)
+Space O(n^2)

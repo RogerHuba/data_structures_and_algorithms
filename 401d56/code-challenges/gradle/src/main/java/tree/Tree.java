@@ -6,12 +6,12 @@ import java.util.ArrayList;
 
 public class Tree {
 
-    protected Node root;
+    public Node root;
     int maxValue = 0;
-    class Node {
-        int data;
-        Node left;
-        Node right;
+    public class Node {
+        public int data;
+        public Node left;
+        public Node right;
 
         Node(int data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class Tree {
         return containsNode(root, data);
     }
 
-    ArrayList inOrder(Tree.Node node, ArrayList newArray) {
+    public static ArrayList inOrder(Tree.Node node, ArrayList newArray) {
         if (node != null) {
             inOrder(node.left, newArray);
             System.out.print(" " + node.data);
