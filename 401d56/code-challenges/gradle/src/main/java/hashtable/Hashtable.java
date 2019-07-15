@@ -2,13 +2,13 @@ package hashtable;
 
 public class Hashtable {
 
-    public Node[] map;
+    public static Node[] map;
 
     public Hashtable(int size){
         map = new Node[size];
     }
 
-    int hash(String key){
+    static int hash(String key){
         int hashValue = 0;
         char[] letters = key.toCharArray();
         for(int i = 0; i < letters.length; i++){
@@ -31,7 +31,7 @@ public class Hashtable {
     }
 
     // get
-    public String get(String key){
+    public static String get(String key){
         int hashkey = hash(key);
         String value = map[hashkey].getValue();
 

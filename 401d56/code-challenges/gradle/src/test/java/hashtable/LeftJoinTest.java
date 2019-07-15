@@ -2,11 +2,12 @@ package hashtable;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-public class HashtableTest {
+public class LeftJoinTest {
 
-    public Hashtable addToHashtableSmall() {
+    public Hashtable addToHashtable1() {
         Hashtable ht = new Hashtable(1024);
         ht.set("Roger", "Man");
         ht.set("Michelle", "Woman");
@@ -15,22 +16,31 @@ public class HashtableTest {
         return ht;
     }
 
+    public Hashtable addToHashtable2() {
+        Hashtable ht = new Hashtable(1024);
+        ht.set("Roger", "Boy");
+        ht.set("Michelle", "Girl");
+        ht.set("Taylor", "girl");
+        ht.set("Coden", "boy");
+        return ht;
+    }
+
     @Test
     public void testGetLengthOfHashtable(){
-        Hashtable ht = addToHashtableSmall();
+        Hashtable ht = addToHashtable1();
         assertEquals("The value should be 'TestValue'.", 1024, ht.getLength());
     }
 
     @Test
     public void testAddingValueToHashtable(){
-        Hashtable ht = addToHashtableSmall();
+        Hashtable ht = addToHashtable1();
         String testValue = ht.get("Roger");
         assertEquals("The value should be 'Man'.", "Man", testValue);
     }
 
     @Test
     public void testHashtableContains(){
-        Hashtable ht = addToHashtableSmall();
+        Hashtable ht = addToHashtable1();
         boolean testValue = ht.contains("Roger");
         assertTrue(testValue);
     }
@@ -65,9 +75,28 @@ public class HashtableTest {
 
     @Test
     public void testReturnNullNotThere(){
-        Hashtable ht = addToHashtableSmall();
+        Hashtable ht = addToHashtable2();
         Boolean testValue = ht.contains("Rogerr");
         assertEquals("The value should be 'null'.", null, testValue);
     }
 
+    @Test
+    public void testJoinTwoHashTables(){
+        Hashtable ht1 = addToHashtable1();
+        Hashtable ht2 = addToHashtable2();
+        Hashtable newHashTable = LeftJoin.leftJoin(ht1, ht2);
+//        assertEquals("The value should be [[\"Roger\", \"Man\", \"Boy\"],\n" +
+//                "[\"Michelle\", \"Woman\", \"Girl\"],\n" +
+//                "[\"Chloe\", \"girl\", null],\n" +
+//                "[\"Jameson\", \"boy\", null]]"
+//                ,
+//                [
+//                    ["Roger", "Man", "Boy"],
+//                    ["Michelle", "Woman", "Girl"],
+//                    ["Chloe", "girl", null],
+//                    ["Jameson", "boy", null]
+//                ]
+//                ,
+//                newHashTable);
+    }
 }

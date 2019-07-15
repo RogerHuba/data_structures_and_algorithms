@@ -5,7 +5,9 @@ A repository of code challenges presented during my 401 Java Class.
 Follows a standard GitHub workflow for cloning and requiring implementations using Java and Gradle.
 
 ## Table of Contents
-Data Structures
+Code Challenges JavaScript
+
+Data Structures Java and Python
 
 1.  ArrayReverse - No Picture
     - [JAVA Readme](./401d56/code-challenges/ArrayReverse/README.md)
@@ -119,6 +121,15 @@ Data Structures
     - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
     - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/hashtable/TreeIntersectiomn.java)
     - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/TreeIntersectionTest.java)
+![left_join]
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/hashtable/README.md)
+    - [JAVA Code](./401d56/code-challenges/gradle/src/main/java/hashtable/LeftJoin.java)
+    - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/LeftJoinTest.java)
+
+    
+    
+    
+    
     
 [ArrayShift]: ./401d56/assets/arrayshift_java.png
 [BinarySearch]: ./401d56/assets/array_binary_search.jpg
@@ -133,3 +144,4 @@ Data Structures
 [find_max_value]: ./401d56/assets/find_max_value.jpeg
 [repeated_word]: ./401d56/assets/hash_repeat_words.jpeg
 [tree_intersection]: ./401d56/assets/tree_intersection.jpeg
+[left_join]: ./401d56/assets/LeftJoin.jpeg
