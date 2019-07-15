@@ -1,64 +1,77 @@
 package Graph;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Queue;
 
-public class Graph {
-    int Vertex;
-    LinkedList<Integer> adjListArray[];
-    Graph(int Vertex) {
-        this.Vertex = Vertex;
-        adjListArray = new LinkedList[Vertex];
+public class Graph<T>{
 
-        for(int i = 0; i < Vertex ; i++){
-            adjListArray[i] = new LinkedList<>();
+    private HashSet<Node<T>> nodes;
+
+    public Graph(){
+        this.nodes = new HashSet<>();
+    }
+
+    public Node<T> addNode(T data){
+        Node node = new Node(data);
+        this.nodes.add(node);
+        return node;
+    }
+
+    public boolean addEdge(Node<T> one, Node<T> two){
+        if (this.nodes.contains(one) && this.nodes.contains(two)){
+            one.addNeighbor(two);
+            two.addNeighbor(one);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addEdge(Node<T> one, Node<T> two, int weight){
+        if (this.nodes.contains(one) && this.nodes.contains(two)){
+            one.addNeighbor(two, weight);
+            two.addNeighbor(one, weight);
+            return true;
+        }
+        return false;
+    }
+
+    public HashSet<Node<T>> getNodes() {
+        return this.nodes;
+    }
+
+    public HashSet<Edge> getNeighbors(Node<T> node){
+        return node.neighbors;
+    }
+
+    public int size() {
+        return this.nodes.size();
+    }
+
+    public static LinkedList<Node> breadthFirst(Node node) {
+
+        LinkedList<Node> results = new LinkedList<>();
+        LinkedList<Node> visited = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        visited.add(node);
+
+        while (!queue.isEmpty()){
+            Node dequeue = queue.remove();
+            results.add(dequeue);
+            ArrayList<Edge> deqNeighbors = new ArrayList();
+
+            if (dequeue.neighbors != null) {
+                deqNeighbors.addAll(dequeue.neighbors);
+                for(Edge e : deqNeighbors){
+                    if (!visited.contains(e.node)){
+                        queue.add(e.node);
+                        visited.add(e.node);
+                    }
+                }
             }
         }
-
-    static void addEdge(Graph graph, int src, int dest)
-    {
-        graph.adjListArray[src].add(dest);
-
-        graph.adjListArray[dest].add(src);
-    }
-
-
-
-    public void AddNode(){
-        //TODO: AddNode
-//        Adds a new node to the graph
-//        Takes in the value of that node
-//        Returns the added node
-    }
-    
-    public void RemoveNode(){
-        //TODO: RemoveNode
-//        Adds a new node to the graph
-//        Takes in the value of that node
-//        Returns the added node
-    }
-
-    public void AddEdge(){
-        //TODO: AddEdge
-//        Adds a new edge between two nodes in the graph
-//        Include the ability to have a “weight”
-//        Takes in the two nodes to be connected by the edge
-//        Both nodes should already be in the Graph
-    }
-
-    public void GetNodes() {
-        //TODO: GetNodes
-//        Returns all of the nodes in the graph as a collection(set, list, or similar)
-    }
-
-    public void GetNeighbors() {
-        //TODO: GetNeighbors
-//        Returns a collection of nodes connected to the given node
-//        Takes in a given node
-//        Include the weight of the connection in the returned collection
-    }
-
-    public void Size() {
-        //TODO: getSize
-//        Returns the total number of nodes in the graph
+        return results;
     }
 }

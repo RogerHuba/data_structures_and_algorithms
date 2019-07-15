@@ -30,7 +30,6 @@ public class LinkedList
         }
     }
 
-    //Insert a value to the end of the LinkedList (new Head)
     public void append(int value){
         Node currentNewNode = new Node(value);
         currentNewNode.next = null;
@@ -55,7 +54,6 @@ public class LinkedList
         return false;
     }
 
-    // Insert a new node before the value provided.
     public void insertBefore(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
@@ -76,7 +74,6 @@ public class LinkedList
         }
     }
 
-    //Insert a new node after the value provided
     public void insertAfter(int insertValue, int pivotValue){
         Node currentNewNode = new Node(insertValue);
         Node current = this.head;
