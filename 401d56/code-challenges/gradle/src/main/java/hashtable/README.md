@@ -25,3 +25,7 @@ Space O(n^2)
 Will take in 2 binary trees and return a set of values that are shared between the 2 trees.
 Time: O(n^2)
 Space O(n^2)
+
+# Left Join
+Will take 2 hash maps and merge into one, returning the left map with appended values from 
+the 2nd map.
