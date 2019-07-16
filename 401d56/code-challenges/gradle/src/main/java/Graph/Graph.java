@@ -3,6 +3,7 @@ package Graph;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Stack;
 import java.util.Queue;
 
 public class Graph<T>{
@@ -67,6 +68,29 @@ public class Graph<T>{
                 for(Edge e : deqNeighbors){
                     if (!visited.contains(e.node)){
                         queue.add(e.node);
+                        visited.add(e.node);
+                    }
+                }
+            }
+        }
+        return results;
+    }
+
+    public static LinkedList<Node> depthFirst(Node node) {
+
+        LinkedList<Node> results = new LinkedList<>();
+        HashSet<Node> visited = new HashSet<>();
+        Stack<Node> stack = new Stack<>();
+        stack.push(node);
+        visited.add(node);
+
+        while (!stack.isEmpty()){
+            Node temp = stack.pop();
+            results.add(temp);
+            if (temp.neighbors != null){
+                for (Edge e: (HashSet<Edge>) temp.neighbors){
+                    if (!visited.contains(e.node)){
+                        stack.push(e.node);
                         visited.add(e.node);
                     }
                 }
