@@ -26,6 +26,8 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 -depthFirst()
     - Completed a depth first traversal.
 
+##
+Get Edges - Returns a T/F and a cost if travel is possible.
 
 ## Approach & Efficiency
 O(n)
