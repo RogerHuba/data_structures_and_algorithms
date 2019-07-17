@@ -21,6 +21,11 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
     - Include the weight of the connection in the returned collection
 - Size()
     - Returns the total number of nodes in the graph
+-breadthFirst()
+    - Completes a breadth first traversal.
+-depthFirst()
+    - Completed a depth first traversal.
+
 
 ## Approach & Efficiency
 O(n)
@@ -31,3 +36,5 @@ addEdge
 getNodes
 getNeighbors
 size
+breadthFirst
+depthFirst
