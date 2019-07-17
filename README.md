@@ -127,9 +127,10 @@ Data Structures Java and Python
     - [JAVA Testing](./401d56/code-challenges/gradle/src/test/java/hashtable/LeftJoinTest.java)
 
 11.  Graphs
-    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/)
-    - [JAVA Code Node](./401d56/code-challenges/gradle/src/main/java/)
-    - [JAVA Code Hashtable](./401d56/code-challenges/gradle/src/main/java/)
+    - [JAVA Readme](./401d56/code-challenges/gradle/src/main/java/Graph/README.md)
+    - [JAVA Code Node](./401d56/code-challenges/gradle/src/main/java/Graph/Node.java)
+    - [JAVA Code Graph](./401d56/code-challenges/gradle/src/main/java/Graph/Graph.java)
+    - [JAVA Code Edge](./401d56/code-challenges/gradle/src/main/java/Graph/Edge.java)
     - [Python Readme](./401d10/data_structures/graph/README.md)
     - [Python Code](./401d10/data_structures/graph/graph.py)
     - [Python Tests](./401d10/data_structures/graph/graphtest.py)
