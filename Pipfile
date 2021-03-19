@@ -12,7 +12,7 @@ pytz = "==2018.9"
 coverage = "==4.5.2"
 django-registration = "==3.0"
 django = ">=2.1.9"
-Pillow = "==5.4.1"
+Pillow = "==8.1.1"
 confusable_homoglyphs = "==3.2.0"
 
 [requires]
